@@ -47,7 +47,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
     const responses = {
       smartwall: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section',
+          '• Scroll down to "One Click Resources Centre Section"',
           '• Click the "Smart Wall" option',
           '• In the current page, click on the image, document, audio, video or animations of your choice ',
           '• if your are interested to download or print the file, click on download icon or print icon respectively',
