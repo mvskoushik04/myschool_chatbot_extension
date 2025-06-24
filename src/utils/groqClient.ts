@@ -87,7 +87,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/smart-wall'
     },
     visualworksheets: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Worksheets with visual aids and graphics to help students understand concepts better.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Visual Worksheets" option',
@@ -109,7 +109,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/pictorial-stories'
     },
     projectcharts: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Charts and visual aids for school projects across different subjects.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Project Charts" option',
@@ -120,7 +120,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/project-charts'
     },
     dictionary: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'A digital dictionary for quick reference and vocabulary building.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Dictionary" option',
@@ -131,7 +131,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/dictionary'
     },
     valueeducation: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Resources and materials focused on value education and life skills.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Value Education" option',
@@ -142,7 +142,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/life-skills'
     },
     scienceprojects: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Ideas and resources for science projects and experiments.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Science Projects" option',
@@ -153,7 +153,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/science-projects'
     },
     languagegames: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Interactive games to enhance language learning and grammar skills.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Language Games" option',
@@ -164,7 +164,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/language-games'
     },
     mappointing: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Activities and resources for map pointing and geography skills.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Map Pointing" option',
@@ -175,7 +175,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/map-pointing'
     },
     subjectposters: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Posters for various subjects to aid classroom learning and decoration.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Subject Posters" option',
@@ -186,7 +186,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/subject-posters'
     },
     craftlessons: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Step-by-step craft lessons and activities for students.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Craft Lessons" option',
@@ -197,7 +197,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/craft-lessons'
     },
     artlessons: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Lessons and resources for learning art techniques and skills.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Art Lessons" option',
@@ -208,7 +208,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/art-lessons'
     },
     parentteacheractivities: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Activities designed for parent-teacher collaboration and engagement.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Parent Teacher Activities" option',
@@ -219,7 +219,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/parent-teacher-activities'
     },
     rhymes: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'A collection of rhymes and songs for early learners.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Rhymes" option',
@@ -230,7 +230,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/rhymes'
     },
     holidayhomefun: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Fun and educational activities for students to do at home during holidays.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Holiday Home Fun" option',
@@ -241,7 +241,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/holiday-home-fun'
     },
     computerlessons: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Lessons and resources for learning computer basics and digital skills.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Computer Lessons" option',
@@ -252,7 +252,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/computer-lessons'
     },
     mcqbank: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'A bank of multiple-choice questions for practice and assessment.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "MCQ Bank" option',
@@ -263,7 +263,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/mcq-bank'
     },
     edumagazines: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Educational magazines covering a variety of topics for students.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Edu Magazines" option',
@@ -274,7 +274,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/edu-magazines'
     },
     gkscience: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'General knowledge and science resources for students.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "GK Science" option',
@@ -285,7 +285,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/gk-science'
     },
     teachermanuals: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Manuals and guides for teachers to assist in lesson planning and teaching.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Teacher Manuals" option',
@@ -296,7 +296,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/teacher-manuals'
     },
     earlycareer: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Resources and guidance for early career planning and development.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Early Career" option',
@@ -307,7 +307,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/early-career'
     },
     mindmapinfographics: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Mind maps and infographics to visually organize information and concepts.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Mind Map Infographics" option',
@@ -318,7 +318,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/mind-map-infographics'
     },
     activity: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'A variety of classroom and extracurricular activities for students.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Activity" option',
@@ -329,7 +329,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/activity'
     },
     flashcards: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Flashcards for quick learning and revision of key concepts.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Flash Cards" option',
@@ -340,7 +340,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/flash-cards'
     },
     puzzlesriddles: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Puzzles and riddles to challenge and engage students.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Puzzles Riddles" option',
@@ -351,7 +351,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/puzzles-riddles'
     },
     imagebank: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'A bank of images for educational use and reference.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Image Bank" option',
@@ -362,7 +362,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/imagebank'
     },
     animatedcontent: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Animated educational content for interactive learning.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Animated Content" option',
@@ -373,7 +373,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/animated-content'
     },
     comics: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Comics and illustrated stories for fun and educational reading.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Comics" option',
@@ -384,7 +384,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/comics'
     },
     greatlives: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Biographies and stories of great personalities and achievers.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Great Lives" option',
@@ -395,7 +395,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/great-lives'
     },
     discovery: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Resources and stories about discoveries and inventions.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Discovery" option',
@@ -406,7 +406,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/discovery'
     },
     learnhandwriting: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Lessons and practice sheets for learning handwriting.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Learn Hand Writing" option',
@@ -417,7 +417,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/learn-hand-writing'
     },
     examtips: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Tips and strategies for exam preparation and success.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Exam Tips" option',
@@ -428,7 +428,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/exam-tips'
     },
     brainteasers: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Brain teasers and logic puzzles to stimulate thinking.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Brain Teasers" option',
@@ -439,7 +439,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/sections/brain-teasers'
     },
     lunchbox: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'Ideas and tips for healthy and interesting lunch boxes for students.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Lunch Box" option',
