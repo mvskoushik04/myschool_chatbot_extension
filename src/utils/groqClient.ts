@@ -549,6 +549,116 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/class/class-10?main=0&mu=13'
       },
+      grade1: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 1"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-1?main=1&mu=0'
+      },
+      grade2: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 2"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-2?main=1&mu=1'
+      },
+      grade3: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "GRADE"',
+          '• Select "GRADE 3"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-3?main=1&mu=2'
+      },
+      grade4: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 4"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-4?main=1&mu=3'
+      },
+      grade5: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 5"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-5?main=1&mu=4'
+      },
+      grade6: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 6"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-6?main=1&mu=5'
+      },
+      grade7: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 7"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-7?main=1&mu=6'
+      },
+      grade8: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 8"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-8?main=1&mu=7'
+      },
+      grade9: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 9"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-9?main=1&mu=8'
+      },
+      grade10: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "GRADE"',
+            '• Select "GRADE 10"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/grade/grade-10?main=1&mu=9'
+      },
       homeschooling: {
         steps: [
             '• Go to "Academic"',
