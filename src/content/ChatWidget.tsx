@@ -3,6 +3,8 @@ import { Message, ChatState } from '../types';
 import { saveChatState, loadChatState, clearChatState } from '../utils/storage';
 import { analyzeUserIntent, getHardcodedResponse } from '../utils/groqClient';
 
+<style>{`@keyframes floatIn { from { transform: translateY(20px); opacity: 0.5; } to { transform: translateY(0); opacity: 1; } }`}</style>
+
 const ChatWidget: React.FC = () => {
   const [chatState, setChatState] = useState<ChatState>({
     messages: [],
@@ -267,7 +269,8 @@ const ChatWidget: React.FC = () => {
                     maxWidth: '80%',
                     fontSize: '13px',
                     whiteSpace: 'pre-line',
-                    marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0
+                    marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0,
+                    animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)'
                   }}
                 >
                   {isBotSteps ? (
