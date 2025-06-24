@@ -21,7 +21,7 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
         messages: [
           {
             role: 'system',
-            content: 'You are a school portal assistant. Respond with only: "smartWall", "visualWorkSheets", "pictorialStories", "projectCharts", "dictionary", "valueEducation", "scienceProjects", "languageGames", "mapPointing", "subjectPosters", "craftLessons", "artLessons", "parentTeacherActivities", "rhymes", "holidayHomeFun", "computerLessons", "mcqBank", "eduMagazines", "gkScience", "teacherManuals", "earlyCareer", "mindMapInfographics", "activity", "flashCards", "puzzlesRiddles", "imageBank", "animatedContent", "comics", "greatLives", "discovery", "learnHandWriting", "examTips", "brainTeasers", "lunchBox", or "safety" based on user intent.'
+            content: 'You are a school portal assistant. Respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", or "safety". Do not use spaces or uppercase letters.'
           },
           {
             role: 'user',
@@ -34,7 +34,9 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
     });
 
     const data: GroqResponse = await response.json();
-    return data.choices[0]?.message?.content?.toLowerCase().trim() || 'general';
+    const intent = data.choices[0]?.message?.content?.toLowerCase().replace(/\s/g, '').trim() || 'general';
+    console.log('Intent from API:', intent);
+    return intent;
   } catch (error) {
     console.error('Groq API error:', error);
     return 'general';
@@ -43,7 +45,7 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
 
 export const getHardcodedResponse = (intent: string): { steps: string[], url: string } => {
     const responses = {
-      smartWall: {
+      smartwall: {
         steps: [
           '• Submit "notifications" to submit work',
           '• Filter by "notifications" to generate report',
@@ -52,7 +54,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/smart-wall'
       },
-      visualWorkSheets: {
+      visualworksheets: {
         steps: [
           '• Check "payment page" to contact support',
           '• Choose "student portal" to check status',
@@ -61,7 +63,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/visual-worksheets'
       },
-      pictorialStories: {
+      pictorialstories: {
         steps: [
           '• Navigate to "attendance records" to upload files',
           '• Refer to "help section" to download receipt',
@@ -70,7 +72,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/pictorial-stories'
       },
-      projectCharts: {
+      projectcharts: {
         steps: [
           '• Download "academic section" to select date range',
           '• Choose "main menu" to upload files',
@@ -88,7 +90,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/dictionary'
       },
-      valueEducation: {
+      valueeducation: {
         steps: [
           '• Contact "student portal" for more information',
           '• Refer to "main menu" to check status',
@@ -97,7 +99,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/life-skills'
       },
-      scienceProjects: {
+      scienceprojects: {
         steps: [
           '• Click on "grade report" for more information',
           '• View "assignments tab" to contact support',
@@ -106,7 +108,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/science-projects'
       },
-      languageGames: {
+      languagegames: {
         steps: [
           '• Download "attendance records" for more information',
           '• Access "main menu" to download receipt',
@@ -115,7 +117,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/language-games'
       },
-      mapPointing: {
+      mappointing: {
         steps: [
           '• Refer to "finance section" for more information',
           '• Select "dashboard" to filter results',
@@ -124,7 +126,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/map-pointing'
       },
-      subjectPosters: {
+      subjectposters: {
         steps: [
           '• Navigate to "student portal" to upload files',
           '• View "help section" to contact support',
@@ -133,7 +135,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/subject-posters'
       },
-      craftLessons: {
+      craftlessons: {
         steps: [
           '• Select "main menu" to generate report',
           '• Select "help section" to filter results',
@@ -142,7 +144,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/craft-lessons'
       },
-      artLessons: {
+      artlessons: {
         steps: [
           '• Submit "grade report" to download receipt',
           '• Submit "academic section" to submit work',
@@ -151,7 +153,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/art-lessons'
       },
-      parentTeacherActivities: {
+      parentteacheractivities: {
         steps: [
           '• Navigate to "payment page" to filter results',
           '• Navigate to "payment page" to select date range',
@@ -169,7 +171,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/rhymes'
       },
-      holidayHomeFun: {
+      holidayhomefun: {
         steps: [
           '• Check "help section" to upload files',
           '• Select "payment page" to download receipt',
@@ -178,7 +180,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/holiday-home-fun'
       },
-      computerLessons: {
+      computerlessons: {
         steps: [
           '• View "main menu" to download receipt',
           '• Navigate to "academic section" to generate report',
@@ -187,7 +189,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/computer-lessons'
       },
-      mcqBank: {
+      mcqbank: {
         steps: [
           '• Go to "payment page" to upload files',
           '• Select "academic section" to download receipt',
@@ -196,7 +198,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/mcq-bank'
       },
-      eduMagazines: {
+      edumagazines: {
         steps: [
           '• Go to "notifications" to view details',
           '• Navigate to "assignments tab" to select date range',
@@ -205,7 +207,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/edu-magazines'
       },
-      gkScience: {
+      gkscience: {
         steps: [
           '• Click on "attendance records" to submit work',
           '• Filter by "grade report" to view details',
@@ -214,7 +216,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/gk-science'
       },
-      teacherManuals: {
+      teachermanuals: {
         steps: [
           '• Choose "attendance records" to view details',
           '• Filter by "academic section" to contact support',
@@ -223,7 +225,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/teacher-manuals'
       },
-      earlyCareer: {
+      earlycareer: {
         steps: [
           '• Go to "assignments tab" to contact support',
           '• Submit "main menu" to filter results',
@@ -232,7 +234,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/early-career'
       },
-      mindMapInfographics: {
+      mindmapinfographics: {
         steps: [
           '• Refer to "assignments tab" to select date range',
           '• Navigate to "finance section" to generate report',
@@ -250,7 +252,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/activity'
       },
-      flashCards: {
+      flashcards: {
         steps: [
           '• Download "payment page" to select date range',
           '• Access "dashboard" to select date range',
@@ -259,7 +261,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/flash-cards'
       },
-      puzzlesRiddles: {
+      puzzlesriddles: {
         steps: [
           '• Filter by "payment page" for more information',
           '• Click on "attendance records" to upload files',
@@ -268,7 +270,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/puzzles-riddles'
       },
-      imageBank: {
+      imagebank: {
         steps: [
           '• Select "payment page" to select date range',
           '• Go to "grade report" to select date range',
@@ -277,7 +279,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/imagebank'
       },
-      animatedContent: {
+      animatedcontent: {
         steps: [
           '• Click on "payment page" to filter results',
           '• Filter by "finance section" to check status',
@@ -295,7 +297,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/comics'
       },
-      greatLives: {
+      greatlives: {
         steps: [
           '• Select "payment page" to select date range',
           '• Choose "notifications" to filter results',
@@ -313,7 +315,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/discovery'
       },
-      learnHandWriting: {
+      learnhandwriting: {
         steps: [
           '• Select "main menu" for more information',
           '• Choose "student portal" to view details',
@@ -322,7 +324,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/learn-hand-writing'
       },
-      examTips: {
+      examtips: {
         steps: [
           '• Filter by "student portal" to upload files',
           '• Choose "support page" to check status',
@@ -331,7 +333,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/exam-tips'
       },
-      brainTeasers: {
+      brainteasers: {
         steps: [
           '• Refer to "finance section" to check status',
           '• Navigate to "support page" to contact support',
@@ -340,7 +342,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/brain-teasers'
       },
-      lunchBox: {
+      lunchbox: {
         steps: [
           '• Choose "notifications" to contact support',
           '• Check "help section" to contact support',
@@ -359,6 +361,9 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         url: 'https://demo.myschool.in/views/sections/safety'
       }
     };
-    
-    return responses[intent as keyof typeof responses] || responses.smartWall;
-  };  
+    const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
+    return responses[normalizedIntent as keyof typeof responses] || {
+      steps: ['Sorry, I could not recognize that section. Please try again.'],
+      url: ''
+    };
+};  
