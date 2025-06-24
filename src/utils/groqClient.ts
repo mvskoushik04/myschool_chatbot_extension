@@ -34,7 +34,10 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
     });
 
     const data: GroqResponse = await response.json();
-    const intent = data.choices[0]?.message?.content?.toLowerCase().replace(/\s/g, '').trim() || 'general';
+    const intent =
+        Array.isArray(data.choices) && data.choices[0]?.message?.content
+            ? data.choices[0].message.content.toLowerCase().replace(/\s/g, '').trim()
+            : 'general';
     console.log('Intent from API:', intent);
     return intent;
   } catch (error) {

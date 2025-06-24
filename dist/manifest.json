@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "js": [
-        "assets/index.tsx-loader-896703ff.js"
+        "assets/index.tsx-loader-bdd45531.js"
       ],
       "matches": [
         "https://demo.myschool.in/*"
@@ -26,8 +26,8 @@
         "https://demo.myschool.in/*"
       ],
       "resources": [
-        "assets/ChatWidget-80964c62.js",
-        "assets/index.tsx-d870b2bf.js"
+        "assets/ChatWidget-2a8d5835.js",
+        "assets/index.tsx-605a2098.js"
       ],
       "use_dynamic_url": false
     }
