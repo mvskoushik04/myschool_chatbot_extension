@@ -169,7 +169,7 @@ const ChatWidget: React.FC = () => {
           zIndex: 10000,
           boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
           color: 'white',
-          fontSize: '20px'
+          fontSize: '25px'
         }}
       >
         💬
@@ -218,10 +218,10 @@ const ChatWidget: React.FC = () => {
               color: 'white',
               cursor: 'pointer',
               marginRight: '8px',
-              fontSize: '16px'
+              fontSize: '18px'
             }}
           >
-            {chatState.isMinimized ? '□' : '_'}
+            {chatState.isMinimized ? '□' : '-'}
           </button>
           <button
             onClick={closeChatbot}
@@ -265,7 +265,7 @@ const ChatWidget: React.FC = () => {
                     padding: '6px 10px',
                     borderRadius: '12px',
                     maxWidth: '80%',
-                    fontSize: '12px',
+                    fontSize: '13px',
                     whiteSpace: 'pre-line',
                     marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0
                   }}
@@ -352,7 +352,7 @@ const ChatWidget: React.FC = () => {
                 border: '1px solid #ddd',
                 borderRadius: '16px',
                 outline: 'none',
-                fontSize: '12px'
+                fontSize: '13px'
               }}
             />
             <button
@@ -366,7 +366,7 @@ const ChatWidget: React.FC = () => {
                 height: '30px',
                 borderRadius: '50%',
                 cursor: 'pointer',
-                fontSize: '12px'
+                fontSize: '13px'
               }}
             >
               🎤
@@ -381,7 +381,7 @@ const ChatWidget: React.FC = () => {
                 height: '30px',
                 borderRadius: '50%',
                 cursor: 'pointer',
-                fontSize: '12px'
+                fontSize: '13px'
               }}
             >
               ▶

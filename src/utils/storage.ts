@@ -17,7 +17,7 @@ export const loadChatState = async (): Promise<ChatState> => {
       messages: [
         {
           id: '1',
-          text: 'Hello! I am your school portal assistant , How can I help you ?',
+          text: 'Hello ! I am your school portal assistant , How can I help you ?',
           isUser: false,
           timestamp: Date.now()
         }
