@@ -21,7 +21,7 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
         messages: [
           {
             role: 'system',
-            content: 'You are a school portal assistant. Respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", or "safety". Do not use spaces or uppercase letters.'
+            content: 'You are a school portal assistant. Respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", "theabcsong" or "safety" or "class3". Do not use spaces or uppercase letters.'
           },
           {
             role: 'user',
@@ -394,6 +394,26 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/safety'
+      },
+      theabcsong: {
+        steps: [
+          '• Scroll down to the "One Click Resources Centre Section"',
+          '• Click the "Safety" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice',
+          '• If you are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+        ],
+        url: 'https://myschool-v1.s3.ap-south-1.amazonaws.com/ACADEMIC/thumbnails/CLASS/UKG/ENGLISH/COURSE_BOOK/1.THE%20ABC%20SONG/UKGENI5401001JPC.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250624T121143Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAYRH5M27S4KBQYPPD%2F20250624%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=596dbd5afe0ca253db9929836f0ff9823b42a9e6af7c1398f8ca4f8ede30805a'
+      },
+      class3: {
+        steps: [
+          '• Scroll down to the "One Click Resources Centre Section"',
+          '• Click the "Class 3" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice',
+          '• If you are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-3?main=0&mu=6'
       }
     };
     const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
