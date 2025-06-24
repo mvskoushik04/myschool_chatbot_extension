@@ -249,9 +249,18 @@ const ChatWidget: React.FC = () => {
               overflowY: 'auto',
               display: 'flex',
               flexDirection: 'column',
-              gap: '8px'
+              gap: '8px',
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
             }}
           >
+            <style>
+              {`
+                div[style*="overflow-y: auto"]::-webkit-scrollbar {
+                  display: none;
+                }
+              `}
+            </style>
             {chatState.messages.map((message, idx) => {
               // Detect if this is a bot message with steps (lines starting with •)
               const isBotSteps =
