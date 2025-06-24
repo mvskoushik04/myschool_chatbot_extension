@@ -177,7 +177,7 @@ Would you like me to navigate you to this page directly?`;
         position: 'fixed',
         bottom: '20px',
         right: '20px',
-        width: '320px',
+        width: '300px',
         height: chatState.isMinimized ? '40px' : '400px',
         backgroundColor: 'white',
         border: '1px solid #ddd',
