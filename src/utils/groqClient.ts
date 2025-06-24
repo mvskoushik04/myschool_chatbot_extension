@@ -47,353 +47,353 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
     const responses = {
       smartwall: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Smart Wall"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Smart Wall',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/smart-wall" target="_blank">Open Smart Wall</a>'
+        url: 'https://demo.myschool.in/views/academic/smart-wall'
       },
       visualworksheets: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Visual Worksheets"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Visual Worksheets',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/visual-worksheets" target="_blank">Open Visual Worksheets</a>'
+        url: 'https://demo.myschool.in/views/academic/visual-worksheets'
       },
       pictorialstories: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Pictorial Stories"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Pictorial Stories',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/pictorial-stories" target="_blank">Open Pictorial Stories</a>'
+        url: 'https://demo.myschool.in/views/academic/pictorial-stories'
       },
       projectcharts: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Project Charts"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Project Charts',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/project-charts" target="_blank">Open Project Charts</a>'
+        url: 'https://demo.myschool.in/views/academic/project-charts'
       },
       dictionary: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Dictionary"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Dictionary',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/dictionary" target="_blank">Open Dictionary</a>'
+        url: 'https://demo.myschool.in/views/academic/dictionary'
       },
       valueeducation: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Value Education"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Value Education',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/life-skills" target="_blank">Open Value Education</a>'
+        url: 'https://demo.myschool.in/views/academic/life-skills'
       },
       scienceprojects: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Science Projects"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Science Projects',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/science-projects" target="_blank">Open Science Projects</a>'
+        url: 'https://demo.myschool.in/views/academic/science-projects'
       },
       languagegames: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Language Games"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Language Games',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/language-games" target="_blank">Open Language Games</a>'
+        url: 'https://demo.myschool.in/views/academic/language-games'
       },
       mappointing: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Map Pointing"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Map Pointing',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/map-pointing" target="_blank">Open Map Pointing</a>'
+        url: 'https://demo.myschool.in/views/academic/map-pointing'
       },
       subjectposters: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Subject Posters"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Subject Posters',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/subject-posters" target="_blank">Open Subject Posters</a>'
+        url: 'https://demo.myschool.in/views/academic/subject-posters'
       },
       craftlessons: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Craft Lessons"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Craft Lessons',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/craft-lessons" target="_blank">Open Craft Lessons</a>'
+        url: 'https://demo.myschool.in/views/academic/craft-lessons'
       },
       artlessons: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Art Lessons"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Art Lessons',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/art-lessons" target="_blank">Open Art Lessons</a>'
+        url: 'https://demo.myschool.in/views/academic/art-lessons'
       },
       parentteacheractivities: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Parent Teacher Activities"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Parent Teacher Activities',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/parent-teacher-activities" target="_blank">Open Parent Teacher Activities</a>'
+        url: 'https://demo.myschool.in/views/academic/parent-teacher-activities'
       },
       rhymes: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Rhymes"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Rhymes',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/rhymes" target="_blank">Open Rhymes</a>'
+        url: 'https://demo.myschool.in/views/academic/rhymes'
       },
       holidayhomefun: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Holiday Home Fun"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Holiday Home Fun',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/holiday-home-fun" target="_blank">Open Holiday Home Fun</a>'
+        url: 'https://demo.myschool.in/views/academic/holiday-home-fun'
       },
       computerlessons: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Computer Lessons"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Computer Lessons',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/computer-lessons" target="_blank">Open Computer Lessons</a>'
+        url: 'https://demo.myschool.in/views/academic/computer-lessons'
       },
       mcqbank: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "MCQ Bank"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click MCQ Bank',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/mcq-bank" target="_blank">Open MCQ Bank</a>'
+        url: 'https://demo.myschool.in/views/academic/mcq-bank'
       },
       edumagazines: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Edu Magazines"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Edu Magazines',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/edu-magazines" target="_blank">Open Edu Magazines</a>'
+        url: 'https://demo.myschool.in/views/academic/edu-magazines'
       },
       gkscience: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "GK Science"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click GK Science',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/gk-science" target="_blank">Open GK Science</a>'
+        url: 'https://demo.myschool.in/views/sections/gk-science'
       },
       teachermanuals: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Teacher Manuals"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Teacher Manuals',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/teacher-manuals" target="_blank">Open Teacher Manuals</a>'
+        url: 'https://demo.myschool.in/views/sections/teacher-manuals'
       },
       earlycareer: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Early Career"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Early Career',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/early-career" target="_blank">Open Early Career</a>'
+        url: 'https://demo.myschool.in/views/sections/early-career'
       },
       mindmapinfographics: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Mind Map Infographics"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Mind Map Infographics',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/mind-map-infographics" target="_blank">Open Mind Map Infographics</a>'
+        url: 'https://demo.myschool.in/views/sections/mind-map-infographics'
       },
       activity: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Activity"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Activity',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/activity" target="_blank">Open Activity</a>'
+        url: 'https://demo.myschool.in/views/sections/activity'
       },
       flashcards: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Flash Cards"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Flash Cards',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/flash-cards" target="_blank">Open Flash Cards</a>'
+        url: 'https://demo.myschool.in/views/sections/flash-cards'
       },
       puzzlesriddles: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Puzzles Riddles"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Puzzles Riddles',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/puzzles-riddles" target="_blank">Open Puzzles Riddles</a>'
+        url: 'https://demo.myschool.in/views/sections/puzzles-riddles'
       },
       imagebank: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Image Bank"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Image Bank',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/imagebank" target="_blank">Open Image Bank</a>'
+        url: 'https://demo.myschool.in/views/sections/imagebank'
       },
       animatedcontent: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Animated Content"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Animated Content',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/animated-content" target="_blank">Open Animated Content</a>'
+        url: 'https://demo.myschool.in/views/sections/animated-content'
       },
       comics: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Comics"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Comics',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/comics" target="_blank">Open Comics</a>'
+        url: 'https://demo.myschool.in/views/sections/comics'
       },
       greatlives: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Great Lives"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Great Lives',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/great-lives" target="_blank">Open Great Lives</a>'
+        url: 'https://demo.myschool.in/views/sections/great-lives'
       },
       discovery: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Discovery"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Discovery',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/discovery" target="_blank">Open Discovery</a>'
+        url: 'https://demo.myschool.in/views/sections/discovery'
       },
       learnhandwriting: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Learn Hand Writing"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Learn Hand Writing',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/learn-hand-writing" target="_blank">Open Learn Hand Writing</a>'
+        url: 'https://demo.myschool.in/views/academic/learn-hand-writing'
       },
       examtips: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Exam Tips"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Exam Tips',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/academic/exam-tips" target="_blank">Open Exam Tips</a>'
+        url: 'https://demo.myschool.in/views/academic/exam-tips'
       },
       brainteasers: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Brain Teasers"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Brain Teasers',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/brain-teasers" target="_blank">Open Brain Teasers</a>'
+        url: 'https://demo.myschool.in/views/sections/brain-teasers'
       },
       lunchbox: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Lunch Box"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Lunch Box',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/lunch-box" target="_blank">Open Lunch Box</a>'
+        url: 'https://demo.myschool.in/views/sections/lunch-box'
       },
       safety: {
         steps: [
-          '• Go to "One Click Resources Centre"',
-          '• Click "Safety"',
-          '• Browse and select content',
-          '• Download or print using icons',
-          '• Use "select image" for multiple files'
+          'Go to Resources Centre',
+          'Click Safety',
+          'Select any resource',
+          'Click download or print',
+          'Use select image for batch'
         ],
-        url: '<a href="https://demo.myschool.in/views/sections/safety" target="_blank">Open Safety</a>'
+        url: 'https://demo.myschool.in/views/sections/safety'
       }
     };
     const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
