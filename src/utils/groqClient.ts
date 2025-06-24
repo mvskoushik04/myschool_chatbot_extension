@@ -47,371 +47,371 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
     const responses = {
       smartwall: {
         steps: [
-          '• Scroll down to "One Click Resources Centre Section"',
-          '• Click the "Smart Wall" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Smart Wall',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/smart-wall'
       },
       visualworksheets: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Visual Worksheets" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Visual Worksheets',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/visual-worksheets'
       },
       pictorialstories: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Pictorial Stories" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Pictorial Stories',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/pictorial-stories'
       },
       projectcharts: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Project Charts" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Project Charts',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/project-charts'
       },
       dictionary: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Dictionary" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Dictionary',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/dictionary'
       },
       valueeducation: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Value Education" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Value Education',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/life-skills'
       },
       scienceprojects: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Science Projects" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Science Projects',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/science-projects'
       },
       languagegames: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Language Games" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Language Games',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/language-games'
       },
       mappointing: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Map Pointing" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Map Pointing',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/map-pointing'
       },
       subjectposters: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Subject Posters" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Subject Posters',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/subject-posters'
       },
       craftlessons: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Craft Lessons" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Craft Lessons',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/craft-lessons'
       },
       artlessons: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Art Lessons" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Art Lessons',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/art-lessons'
       },
       parentteacheractivities: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Parent Teacher Activities" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Parent Teacher Activities',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/parent-teacher-activities'
       },
       rhymes: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Rhymes" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Rhymes',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/rhymes'
       },
       holidayhomefun: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Holiday Home Fun" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Holiday Home Fun',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/holiday-home-fun'
       },
       computerlessons: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Computer Lessons" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Computer Lessons',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/computer-lessons'
       },
       mcqbank: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "MCQ Bank" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open MCQ Bank',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/mcq-bank'
       },
       edumagazines: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Edu Magazines" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Edu Magazines',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/edu-magazines'
       },
       gkscience: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "GK Science" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open GK Science',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/gk-science'
       },
       teachermanuals: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Teacher Manuals" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Teacher Manuals',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/teacher-manuals'
       },
       earlycareer: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Early Career" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Early Career',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/early-career'
       },
       mindmapinfographics: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Mind Map Infographics" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Mind Map Infographics',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/mind-map-infographics'
       },
       activity: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Activity" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Activity',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/activity'
       },
       flashcards: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Flash Cards" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Flash Cards',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/flash-cards'
       },
       puzzlesriddles: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Puzzles Riddles" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Puzzles Riddles',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/puzzles-riddles'
       },
       imagebank: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Image Bank" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Image Bank',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/imagebank'
       },
       animatedcontent: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Animated Content" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Animated Content',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/animated-content'
       },
       comics: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Comics" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Comics',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/comics'
       },
       greatlives: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Great Lives" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Great Lives',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/great-lives'
       },
       discovery: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Discovery" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Discovery',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/discovery'
       },
       learnhandwriting: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Learn Hand Writing" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Learn Hand Writing',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/learn-hand-writing'
       },
       examtips: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Exam Tips" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Exam Tips',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/exam-tips'
       },
       brainteasers: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Brain Teasers" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Brain Teasers',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/brain-teasers'
       },
       lunchbox: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Lunch Box" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Lunch Box',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/lunch-box'
       },
       safety: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Safety" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Safety',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/sections/safety'
       },
       theabcsong: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Safety" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Safety',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://myschool-v1.s3.ap-south-1.amazonaws.com/ACADEMIC/thumbnails/CLASS/UKG/ENGLISH/COURSE_BOOK/1.THE%20ABC%20SONG/UKGENI5401001JPC.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250624T121143Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAYRH5M27S4KBQYPPD%2F20250624%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=596dbd5afe0ca253db9929836f0ff9823b42a9e6af7c1398f8ca4f8ede30805a'
       },
       class3: {
         steps: [
-          '• Scroll down to the "One Click Resources Centre Section"',
-          '• Click the "Class 3" option',
-          '• In the current page, click on the image, document, audio, video or animations of your choice',
-          '• If you are interested to download or print the file, click on download icon or print icon respectively',
-          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
+          '• Go to "One Click Resources"',
+          '• Open Class 3',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/class/class-3?main=0&mu=6'
       }
