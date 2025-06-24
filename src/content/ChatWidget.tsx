@@ -99,7 +99,7 @@ const ChatWidget: React.FC = () => {
 
     try {
       const intent = await analyzeUserIntent(userMessage);
-      const response = getHardcodedResponse(intent);
+      const response = await getHardcodedResponse(intent);
       const botResponse = `${response.steps.join('\n')}
 
 You can access this at: ${response.url}

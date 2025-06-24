@@ -98,7 +98,7 @@ export const getHardcodedResponse = async (intent: string): Promise<{ steps: str
       url: 'https://demo.myschool.in/views/academic/visual-worksheets'
     },
     pictorialstories: {
-      description: 'A collection of multimedia educational resources like images, documents, audio, video, and animations for various subjects.',
+      description: 'A collection of many moral stories that are presented in a single page so that children can read it in one go.',
       steps: [
         '• Scroll down to the "One Click Resources Centre Section',
         '• Click the "Pictorial Stories" option',
