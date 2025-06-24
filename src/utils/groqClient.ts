@@ -21,7 +21,7 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
         messages: [
           {
             role: 'system',
-            content: 'You are a school portal assistant. Respond with only: "grades", "attendance", "assignments", "fees", or "general" based on user intent.'
+            content: 'You are a school portal assistant. Respond with only: "smartWall", "visualWorkSheets", "pictorialStories", "projectCharts", "dictionary", "valueEducation", "scienceProjects", "languageGames", "mapPointing", "subjectPosters", "craftLessons", "artLessons", "parentTeacherActivities", "rhymes", "holidayHomeFun", "computerLessons", "mcqBank", "eduMagazines", "gkScience", "teacherManuals", "earlyCareer", "mindMapInfographics", "activity", "flashCards", "puzzlesRiddles", "imageBank", "animatedContent", "comics", "greatLives", "discovery", "learnHandWriting", "examTips", "brainTeasers", "lunchBox", or "safety" based on user intent.'
           },
           {
             role: 'user',
