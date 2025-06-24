@@ -261,73 +261,89 @@ const ChatWidget: React.FC = () => {
                 <div
                   key={message.id}
                   style={{
-                    alignSelf: message.isUser ? 'flex-end' : 'flex-start',
-                    backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
-                    color: message.isUser ? 'white' : 'black',
-                    padding: '6px 10px',
-                    borderRadius: '12px',
-                    maxWidth: '80%',
-                    fontSize: '13px',
-                    whiteSpace: 'pre-line',
-                    marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0,
-                    animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)'
+                    display: 'flex',
+                    flexDirection: message.isUser ? 'row-reverse' : 'row',
+                    alignItems: 'flex-end',
                   }}
                 >
-                  {isBotSteps ? (
-                    <ul style={{
-                      paddingLeft: 18,
-                      margin: 0,
-                      listStyle: 'disc',
-                      color: '#2d3a4a',
-                      fontSize: 13,
-                      lineHeight: 1.7,
-                      fontWeight: 500
-                    }}>
-                      {message.text.split('\n').map((step, i) => (
-                        <li key={i} style={{ marginBottom: 4 }}>{step.replace(/^•\s*/, '')}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    message.text
-                  )}
-                  {!message.isUser && showOptions && idx === chatState.messages.length - 1 && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
-                      <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Should I navigate you to the page?</span>
-                      <div style={{ display: 'flex', gap: 8 }}>
-                        <button
-                          onClick={() => handleOption('yes')}
-                          style={{
-                            background: '#007bff',
-                            color: 'white',
-                            border: 'none',
-                            borderRadius: '16px',
-                            padding: '4px 16px',
-                            fontSize: '13px',
-                            cursor: 'pointer',
-                            fontWeight: 500,
-                            boxShadow: '0 1px 4px rgba(0,0,0,0.07)'
-                          }}
-                        >
-                          Yes
-                        </button>
-                        <button
-                          onClick={() => handleOption('no')}
-                          style={{
-                            background: '#f1f1f1',
-                            color: '#333',
-                            border: '1px solid #ddd',
-                            borderRadius: '16px',
-                            padding: '4px 16px',
-                            fontSize: '13px',
-                            cursor: 'pointer',
-                            fontWeight: 500
-                          }}
-                        >
-                          No
-                        </button>
+                  {/* Icon */}
+                  <span style={{ margin: '0 6px', display: 'flex', alignItems: 'center' }}>
+                    {message.isUser ? (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#409eff"/><rect x="6" y="14" width="12" height="6" rx="3" fill="#409eff"/></svg>
+                    ) : (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f1c40f"/><rect x="9" y="16" width="6" height="2" rx="1" fill="#fff"/></svg>
+                    )}
+                  </span>
+                  <div
+                    style={{
+                      alignSelf: message.isUser ? 'flex-end' : 'flex-start',
+                      backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
+                      color: message.isUser ? 'white' : 'black',
+                      padding: '6px 10px',
+                      borderRadius: '12px',
+                      maxWidth: '80%',
+                      fontSize: '13px',
+                      whiteSpace: 'pre-line',
+                      marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0,
+                      animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)'
+                    }}
+                  >
+                    {isBotSteps ? (
+                      <ul style={{
+                        paddingLeft: 18,
+                        margin: 0,
+                        listStyle: 'disc',
+                        color: '#2d3a4a',
+                        fontSize: 13,
+                        lineHeight: 1.7,
+                        fontWeight: 500
+                      }}>
+                        {message.text.split('\n').map((step, i) => (
+                          <li key={i} style={{ marginBottom: 4 }}>{step.replace(/^•\s*/, '')}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      message.text
+                    )}
+                    {!message.isUser && showOptions && idx === chatState.messages.length - 1 && (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
+                        <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Should I navigate you to the page?</span>
+                        <div style={{ display: 'flex', gap: 8 }}>
+                          <button
+                            onClick={() => handleOption('yes')}
+                            style={{
+                              background: '#007bff',
+                              color: 'white',
+                              border: 'none',
+                              borderRadius: '16px',
+                              padding: '4px 16px',
+                              fontSize: '13px',
+                              cursor: 'pointer',
+                              fontWeight: 500,
+                              boxShadow: '0 1px 4px rgba(0,0,0,0.07)'
+                            }}
+                          >
+                            Yes
+                          </button>
+                          <button
+                            onClick={() => handleOption('no')}
+                            style={{
+                              background: '#f1f1f1',
+                              color: '#333',
+                              border: '1px solid #ddd',
+                              borderRadius: '16px',
+                              padding: '4px 16px',
+                              fontSize: '13px',
+                              cursor: 'pointer',
+                              fontWeight: 500
+                            }}
+                          >
+                            No
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               );
             })}
