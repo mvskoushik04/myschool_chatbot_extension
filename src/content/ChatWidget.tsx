@@ -293,7 +293,7 @@ const ChatWidget: React.FC = () => {
                       maxWidth: '80%',
                       fontSize: '13px',
                       whiteSpace: 'pre-line',
-                      marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0,
+                      marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && message.text !== 'Hello ! I am your school portal assistant , How can I help you ?') ? 8 : 0,
                       animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)'
                     }}
                   >
@@ -314,7 +314,7 @@ const ChatWidget: React.FC = () => {
                     ) : (
                       message.text
                     )}
-                    {!message.isUser && showOptions && idx === chatState.messages.length - 1 && (
+                    {!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && message.text !== 'Hello ! I am your school portal assistant , How can I help you ?' && (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
                         <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Should I navigate you to the page?</span>
                         <div style={{ display: 'flex', gap: 8 }}>

@@ -395,26 +395,183 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/sections/safety'
       },
-      theabcsong: {
+      kindergarten: {
         steps: [
-          '• Go to "One Click Resources"',
-          '• Open Safety',
+          '• Go to "Academic"',
+          '• Select "Class"',
+          '• Select "Kindergarten"',
           '• Select a file',
           '• Download or print',
           '• Select multiple files if needed'
         ],
-        url: 'https://myschool-v1.s3.ap-south-1.amazonaws.com/ACADEMIC/thumbnails/CLASS/UKG/ENGLISH/COURSE_BOOK/1.THE%20ABC%20SONG/UKGENI5401001JPC.webp?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250624T121143Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=AKIAYRH5M27S4KBQYPPD%2F20250624%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=596dbd5afe0ca253db9929836f0ff9823b42a9e6af7c1398f8ca4f8ede30805a'
+        url: 'https://demo.myschool.in/views/academic/class/kindergarten?main=0&mu=0'
+      },
+      nursery: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Nursery"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/nursery?main=0&mu=1'
+      },
+      lkg: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "LKG"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/lkg?main=0&mu=2'
+      },
+      ukg: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "UKG"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/ukg?main=0&mu=3'
+      },
+      class1: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 1"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-1?main=0&mu=4'
+      },
+      class2: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 2"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-2?main=0&mu=5'
       },
       class3: {
         steps: [
-          '• Go to "One Click Resources"',
-          '• Open Class 3',
+          '• Go to "Academic"',
+          '• Select "Class"',
+          '• Select "Class 3"',
           '• Select a file',
           '• Download or print',
           '• Select multiple files if needed'
         ],
         url: 'https://demo.myschool.in/views/academic/class/class-3?main=0&mu=6'
-      }
+      },
+      class4: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 4"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-4?main=0&mu=7'
+      },
+      class5: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 5"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-5?main=0&mu=8'
+      },
+      class6: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 6"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-6?main=0&mu=9'
+      },
+      class7: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 7"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-7?main=0&mu=10'
+      },
+      class8: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 8"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-8?main=0&mu=11'
+      },
+      class9: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 9"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-9?main=0&mu=12'
+      },
+      class10: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Class 10"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/class-10?main=0&mu=13'
+      },
+      homeschooling: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Homeschooling"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/homeschooling?main=0&mu=14'
+      },
+      learningcentre: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "Class"',
+            '• Select "Learning Centre"',
+            '• Select a file',
+            '• Download or print',
+            '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/class/learning-centre?main=0&mu=15'
+      },
+
     };
     const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
     return responses[normalizedIntent as keyof typeof responses] || {
