@@ -1,25 +1,20 @@
 {
     "manifest_version": 3,
-    "name": "AI Chatbot Extension",
+    "name": "School Chatbot Assistant",
     "version": "1.0.0",
-    "description": "A chatbot extension for web pages",
+    "description": "AI-powered chatbot for school portal assistance",
     "permissions": [
       "activeTab",
-      "scripting",
       "storage"
     ],
-    "action": {
-      "default_popup": "index.html",
-      "default_title": "Open Chatbot"
-    },
+    "host_permissions": [
+      "https://demo.myschool.in/*"
+    ],
     "content_scripts": [
       {
         "matches": ["https://demo.myschool.in/*"],
-        "js": ["content.js"]
+        "js": ["src/content/index.tsx"]
       }
-    ],
-    "background": {
-      "service_worker": "background.js"
-    }
+    ]
   }
   
