@@ -50,7 +50,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Navigate to "dashboard" to download receipt',
           '• Filter by "support page" to check status'
         ],
-        url: 'https://demo.myschool.in/academic/page1'
+        url: 'https://demo.myschool.in/views/academic/smart-wall'
       },
       visualWorkSheets: {
         steps: [
@@ -59,7 +59,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Navigate to "academic section" to view details',
           '• Access "help section" to filter results'
         ],
-        url: 'https://demo.myschool.in/academic/page2'
+        url: 'https://demo.myschool.in/views/academic/visual-worksheets'
       },
       pictorialStories: {
         steps: [
@@ -68,7 +68,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Access "grade report" to check status',
           '• Filter by "help section" to contact support'
         ],
-        url: 'https://demo.myschool.in/help/page3'
+        url: 'https://demo.myschool.in/views/academic/pictorial-stories'
       },
       projectCharts: {
         steps: [
@@ -77,7 +77,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Refer to "attendance records" to contact support',
           '• Go to "help section" for more information'
         ],
-        url: 'https://demo.myschool.in/portal/page4'
+        url: 'https://demo.myschool.in/views/academic/project-charts'
       },
       dictionary: {
         steps: [
@@ -86,7 +86,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Refer to "support page" to generate report',
           '• Click on "assignments tab" to upload files'
         ],
-        url: 'https://demo.myschool.in/assignments/page5'
+        url: 'https://demo.myschool.in/views/academic/dictionary'
       },
       valueEducation: {
         steps: [
@@ -95,7 +95,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Refer to "academic section" for more information',
           '• Choose "attendance records" to contact support'
         ],
-        url: 'https://demo.myschool.in/student/page6'
+        url: 'https://demo.myschool.in/views/academic/life-skills'
       },
       scienceProjects: {
         steps: [
@@ -104,7 +104,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Filter by "assignments tab" to select date range',
           '• Filter by "payment page" to upload files'
         ],
-        url: 'https://demo.myschool.in/student/page7'
+        url: 'https://demo.myschool.in/views/academic/science-projects'
       },
       languageGames: {
         steps: [
@@ -113,7 +113,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Choose "assignments tab" to contact support',
           '• View "payment page" to select date range'
         ],
-        url: 'https://demo.myschool.in/finance/page8'
+        url: 'https://demo.myschool.in/views/academic/language-games'
       },
       mapPointing: {
         steps: [
@@ -122,7 +122,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Access "attendance records" to download receipt',
           '• Select "notifications" for more information'
         ],
-        url: 'https://demo.myschool.in/student/page9'
+        url: 'https://demo.myschool.in/views/academic/map-pointing'
       },
       subjectPosters: {
         steps: [
@@ -131,7 +131,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Submit "academic section" for more information',
           '• Choose "attendance records" to view details'
         ],
-        url: 'https://demo.myschool.in/student/page10'
+        url: 'https://demo.myschool.in/views/academic/subject-posters'
       },
       craftLessons: {
         steps: [
@@ -140,7 +140,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Go to "assignments tab" to view details',
           '• Refer to "attendance records" for more information'
         ],
-        url: 'https://demo.myschool.in/assignments/page11'
+        url: 'https://demo.myschool.in/views/academic/craft-lessons'
       },
       artLessons: {
         steps: [
@@ -149,7 +149,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Refer to "grade report" to check status',
           '• Click on "dashboard" to filter results'
         ],
-        url: 'https://demo.myschool.in/portal/page12'
+        url: 'https://demo.myschool.in/views/academic/art-lessons'
       },
       parentTeacherActivities: {
         steps: [
@@ -158,7 +158,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Select "assignments tab" to select date range',
           '• Refer to "notifications" to upload files'
         ],
-        url: 'https://demo.myschool.in/help/page13'
+        url: 'https://demo.myschool.in/views/academic/parent-teacher-activities'
       },
       rhymes: {
         steps: [
@@ -167,7 +167,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Filter by "notifications" for more information',
           '• Contact "grade report" to check status'
         ],
-        url: 'https://demo.myschool.in/help/page14'
+        url: 'https://demo.myschool.in/views/academic/rhymes'
       },
       holidayHomeFun: {
         steps: [
@@ -176,7 +176,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Contact "assignments tab" to filter results',
           '• Access "main menu" to contact support'
         ],
-        url: 'https://demo.myschool.in/assignments/page15'
+        url: 'https://demo.myschool.in/views/academic/holiday-home-fun'
       },
       computerLessons: {
         steps: [
@@ -185,7 +185,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Select "payment page" for more information',
           '• Choose "main menu" to view details'
         ],
-        url: 'https://demo.myschool.in/portal/page16'
+        url: 'https://demo.myschool.in/views/academic/computer-lessons'
       },
       mcqBank: {
         steps: [
@@ -194,7 +194,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Refer to "grade report" to filter results',
           '• Check "grade report" to upload files'
         ],
-        url: 'https://demo.myschool.in/dashboard/page17'
+        url: 'https://demo.myschool.in/views/academic/mcq-bank'
       },
       eduMagazines: {
         steps: [
@@ -203,7 +203,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Contact "finance section" to filter results',
           '• Contact "finance section" to check status'
         ],
-        url: 'https://demo.myschool.in/academic/page18'
+        url: 'https://demo.myschool.in/views/academic/edu-magazines'
       },
       gkScience: {
         steps: [
@@ -212,7 +212,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Refer to "support page" to select date range',
           '• Click on "finance section" for more information'
         ],
-        url: 'https://demo.myschool.in/help/page19'
+        url: 'https://demo.myschool.in/views/sections/gk-science'
       },
       teacherManuals: {
         steps: [
@@ -221,7 +221,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Choose "main menu" to select date range',
           '• Go to "grade report" to view details'
         ],
-        url: 'https://demo.myschool.in/assignments/page20'
+        url: 'https://demo.myschool.in/views/sections/teacher-manuals'
       },
       earlyCareer: {
         steps: [
@@ -230,7 +230,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Access "dashboard" for more information',
           '• Submit "support page" for more information'
         ],
-        url: 'https://demo.myschool.in/assignments/page21'
+        url: 'https://demo.myschool.in/views/sections/early-career'
       },
       mindMapInfographics: {
         steps: [
@@ -239,7 +239,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Navigate to "support page" to filter results',
           '• Select "grade report" to generate report'
         ],
-        url: 'https://demo.myschool.in/portal/page22'
+        url: 'https://demo.myschool.in/views/sections/mind-map-infographics'
       },
       activity: {
         steps: [
@@ -248,7 +248,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Filter by "support page" to check status',
           '• Download "academic section" to filter results'
         ],
-        url: 'https://demo.myschool.in/dashboard/page23'
+        url: 'https://demo.myschool.in/views/sections/activity'
       },
       flashCards: {
         steps: [
@@ -257,7 +257,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Contact "help section" to contact support',
           '• Check "help section" to contact support'
         ],
-        url: 'https://demo.myschool.in/portal/page24'
+        url: 'https://demo.myschool.in/views/sections/flash-cards'
       },
       puzzlesRiddles: {
         steps: [
@@ -266,7 +266,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Download "dashboard" for more information',
           '• Download "payment page" to contact support'
         ],
-        url: 'https://demo.myschool.in/student/page25'
+        url: 'https://demo.myschool.in/views/sections/puzzles-riddles'
       },
       imageBank: {
         steps: [
@@ -275,7 +275,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Select "academic section" to upload files',
           '• Download "help section" to submit work'
         ],
-        url: 'https://demo.myschool.in/finance/page26'
+        url: 'https://demo.myschool.in/views/sections/imagebank'
       },
       animatedContent: {
         steps: [
@@ -284,7 +284,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Choose "attendance records" to upload files',
           '• Choose "academic section" to generate report'
         ],
-        url: 'https://demo.myschool.in/portal/page27'
+        url: 'https://demo.myschool.in/views/sections/animated-content'
       },
       comics: {
         steps: [
@@ -293,7 +293,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• View "attendance records" to generate report',
           '• Contact "main menu" to check status'
         ],
-        url: 'https://demo.myschool.in/academic/page28'
+        url: 'https://demo.myschool.in/views/sections/comics'
       },
       greatLives: {
         steps: [
@@ -302,7 +302,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Access "help section" to upload files',
           '• Go to "notifications" to upload files'
         ],
-        url: 'https://demo.myschool.in/dashboard/page29'
+        url: 'https://demo.myschool.in/views/sections/great-lives'
       },
       discovery: {
         steps: [
@@ -311,7 +311,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Select "payment page" to submit work',
           '• Go to "academic section" to view details'
         ],
-        url: 'https://demo.myschool.in/academic/page30'
+        url: 'https://demo.myschool.in/views/sections/discovery'
       },
       learnHandWriting: {
         steps: [
@@ -320,7 +320,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Filter by "finance section" to upload files',
           '• Refer to "payment page" to filter results'
         ],
-        url: 'https://demo.myschool.in/portal/page31'
+        url: 'https://demo.myschool.in/views/academic/learn-hand-writing'
       },
       examTips: {
         steps: [
@@ -329,7 +329,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Go to "help section" to contact support',
           '• View "grade report" to contact support'
         ],
-        url: 'https://demo.myschool.in/student/page32'
+        url: 'https://demo.myschool.in/views/academic/exam-tips'
       },
       brainTeasers: {
         steps: [
@@ -338,7 +338,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Navigate to "academic section" to filter results',
           '• Go to "support page" to download receipt'
         ],
-        url: 'https://demo.myschool.in/assignments/page33'
+        url: 'https://demo.myschool.in/views/sections/brain-teasers'
       },
       lunchBox: {
         steps: [
@@ -347,7 +347,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Submit "payment page" to upload files',
           '• Filter by "notifications" to generate report'
         ],
-        url: 'https://demo.myschool.in/dashboard/page34'
+        url: 'https://demo.myschool.in/views/sections/lunch-box'
       },
       safety: {
         steps: [
@@ -356,7 +356,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
           '• Go to "assignments tab" to select date range',
           '• View "notifications" to generate report'
         ],
-        url: 'https://demo.myschool.in/dashboard/page35'
+        url: 'https://demo.myschool.in/views/sections/safety'
       }
     };
     
