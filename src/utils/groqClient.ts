@@ -47,316 +47,351 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
     const responses = {
       smartwall: {
         steps: [
-          '• Submit "notifications" to submit work',
-          '• Filter by "notifications" to generate report',
-          '• Navigate to "dashboard" to download receipt',
-          '• Filter by "support page" to check status'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Smart Wall" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/smart-wall'
       },
       visualworksheets: {
         steps: [
-          '• Check "payment page" to contact support',
-          '• Choose "student portal" to check status',
-          '• Navigate to "academic section" to view details',
-          '• Access "help section" to filter results'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Visual Worksheets" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/visual-worksheets'
       },
       pictorialstories: {
         steps: [
-          '• Navigate to "attendance records" to upload files',
-          '• Refer to "help section" to download receipt',
-          '• Access "grade report" to check status',
-          '• Filter by "help section" to contact support'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Pictorial Stories" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/pictorial-stories'
       },
       projectcharts: {
         steps: [
-          '• Download "academic section" to select date range',
-          '• Choose "main menu" to upload files',
-          '• Refer to "attendance records" to contact support',
-          '• Go to "help section" for more information'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Project Charts" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/project-charts'
       },
       dictionary: {
         steps: [
-          '• Navigate to "student portal" to upload files',
-          '• Filter by "notifications" to filter results',
-          '• Refer to "support page" to generate report',
-          '• Click on "assignments tab" to upload files'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Dictionary" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/dictionary'
       },
       valueeducation: {
         steps: [
-          '• Contact "student portal" for more information',
-          '• Refer to "main menu" to check status',
-          '• Refer to "academic section" for more information',
-          '• Choose "attendance records" to contact support'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Value Education" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/life-skills'
       },
       scienceprojects: {
         steps: [
-          '• Click on "grade report" for more information',
-          '• View "assignments tab" to contact support',
-          '• Filter by "assignments tab" to select date range',
-          '• Filter by "payment page" to upload files'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Science Projects" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/science-projects'
       },
       languagegames: {
         steps: [
-          '• Download "attendance records" for more information',
-          '• Access "main menu" to download receipt',
-          '• Choose "assignments tab" to contact support',
-          '• View "payment page" to select date range'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Language Games" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/language-games'
       },
       mappointing: {
         steps: [
-          '• Refer to "finance section" for more information',
-          '• Select "dashboard" to filter results',
-          '• Access "attendance records" to download receipt',
-          '• Select "notifications" for more information'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Map Pointing" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/map-pointing'
       },
       subjectposters: {
         steps: [
-          '• Navigate to "student portal" to upload files',
-          '• View "help section" to contact support',
-          '• Submit "academic section" for more information',
-          '• Choose "attendance records" to view details'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Subject Posters" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/subject-posters'
       },
       craftlessons: {
         steps: [
-          '• Select "main menu" to generate report',
-          '• Select "help section" to filter results',
-          '• Go to "assignments tab" to view details',
-          '• Refer to "attendance records" for more information'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Craft Lessons" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/craft-lessons'
       },
       artlessons: {
         steps: [
-          '• Submit "grade report" to download receipt',
-          '• Submit "academic section" to submit work',
-          '• Refer to "grade report" to check status',
-          '• Click on "dashboard" to filter results'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Art Lessons" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/art-lessons'
       },
       parentteacheractivities: {
         steps: [
-          '• Navigate to "payment page" to filter results',
-          '• Navigate to "payment page" to select date range',
-          '• Select "assignments tab" to select date range',
-          '• Refer to "notifications" to upload files'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Parent Teacher Activities" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/parent-teacher-activities'
       },
       rhymes: {
         steps: [
-          '• Download "student portal" to view details',
-          '• Check "grade report" to submit work',
-          '• Filter by "notifications" for more information',
-          '• Contact "grade report" to check status'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Rhymes" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/rhymes'
       },
       holidayhomefun: {
         steps: [
-          '• Check "help section" to upload files',
-          '• Select "payment page" to download receipt',
-          '• Contact "assignments tab" to filter results',
-          '• Access "main menu" to contact support'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Holiday Home Fun" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/holiday-home-fun'
       },
       computerlessons: {
         steps: [
-          '• View "main menu" to download receipt',
-          '• Navigate to "academic section" to generate report',
-          '• Select "payment page" for more information',
-          '• Choose "main menu" to view details'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Computer Lessons" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/computer-lessons'
       },
       mcqbank: {
         steps: [
-          '• Go to "payment page" to upload files',
-          '• Select "academic section" to download receipt',
-          '• Refer to "grade report" to filter results',
-          '• Check "grade report" to upload files'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "MCQ Bank" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/mcq-bank'
       },
       edumagazines: {
         steps: [
-          '• Go to "notifications" to view details',
-          '• Navigate to "assignments tab" to select date range',
-          '• Contact "finance section" to filter results',
-          '• Contact "finance section" to check status'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Edu Magazines" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/edu-magazines'
       },
       gkscience: {
         steps: [
-          '• Click on "attendance records" to submit work',
-          '• Filter by "grade report" to view details',
-          '• Refer to "support page" to select date range',
-          '• Click on "finance section" for more information'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "GK Science" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/gk-science'
       },
       teachermanuals: {
         steps: [
-          '• Choose "attendance records" to view details',
-          '• Filter by "academic section" to contact support',
-          '• Choose "main menu" to select date range',
-          '• Go to "grade report" to view details'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Teacher Manuals" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/teacher-manuals'
       },
       earlycareer: {
         steps: [
-          '• Go to "assignments tab" to contact support',
-          '• Submit "main menu" to filter results',
-          '• Access "dashboard" for more information',
-          '• Submit "support page" for more information'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Early Career" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/early-career'
       },
       mindmapinfographics: {
         steps: [
-          '• Refer to "assignments tab" to select date range',
-          '• Navigate to "finance section" to generate report',
-          '• Navigate to "support page" to filter results',
-          '• Select "grade report" to generate report'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Mind Map Infographics" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/mind-map-infographics'
       },
       activity: {
         steps: [
-          '• Choose "student portal" to contact support',
-          '• View "help section" to download receipt',
-          '• Filter by "support page" to check status',
-          '• Download "academic section" to filter results'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Activity" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/activity'
       },
       flashcards: {
         steps: [
-          '• Download "payment page" to select date range',
-          '• Access "dashboard" to select date range',
-          '• Contact "help section" to contact support',
-          '• Check "help section" to contact support'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Flash Cards" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/flash-cards'
       },
       puzzlesriddles: {
         steps: [
-          '• Filter by "payment page" for more information',
-          '• Click on "attendance records" to upload files',
-          '• Download "dashboard" for more information',
-          '• Download "payment page" to contact support'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Puzzles Riddles" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/puzzles-riddles'
       },
       imagebank: {
         steps: [
-          '• Select "payment page" to select date range',
-          '• Go to "grade report" to select date range',
-          '• Select "academic section" to upload files',
-          '• Download "help section" to submit work'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Image Bank" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/imagebank'
       },
       animatedcontent: {
         steps: [
-          '• Click on "payment page" to filter results',
-          '• Filter by "finance section" to check status',
-          '• Choose "attendance records" to upload files',
-          '• Choose "academic section" to generate report'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Animated Content" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/animated-content'
       },
       comics: {
         steps: [
-          '• Click on "attendance records" to select date range',
-          '• Select "assignments tab" to upload files',
-          '• View "attendance records" to generate report',
-          '• Contact "main menu" to check status'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Comics" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/comics'
       },
       greatlives: {
         steps: [
-          '• Select "payment page" to select date range',
-          '• Choose "notifications" to filter results',
-          '• Access "help section" to upload files',
-          '• Go to "notifications" to upload files'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Great Lives" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/great-lives'
       },
       discovery: {
         steps: [
-          '• Refer to "dashboard" to contact support',
-          '• Click on "payment page" for more information',
-          '• Select "payment page" to submit work',
-          '• Go to "academic section" to view details'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Discovery" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/discovery'
       },
       learnhandwriting: {
         steps: [
-          '• Select "main menu" for more information',
-          '• Choose "student portal" to view details',
-          '• Filter by "finance section" to upload files',
-          '• Refer to "payment page" to filter results'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Learn Hand Writing" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/learn-hand-writing'
       },
       examtips: {
         steps: [
-          '• Filter by "student portal" to upload files',
-          '• Choose "support page" to check status',
-          '• Go to "help section" to contact support',
-          '• View "grade report" to contact support'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Exam Tips" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/academic/exam-tips'
       },
       brainteasers: {
         steps: [
-          '• Refer to "finance section" to check status',
-          '• Navigate to "support page" to contact support',
-          '• Navigate to "academic section" to filter results',
-          '• Go to "support page" to download receipt'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Brain Teasers" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/brain-teasers'
       },
       lunchbox: {
         steps: [
-          '• Choose "notifications" to contact support',
-          '• Check "help section" to contact support',
-          '• Submit "payment page" to upload files',
-          '• Filter by "notifications" to generate report'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Lunch Box" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/lunch-box'
       },
       safety: {
         steps: [
-          '• Click on "dashboard" to upload files',
-          '• Contact "support page" to check status',
-          '• Go to "assignments tab" to select date range',
-          '• View "notifications" to generate report'
+          '• Scroll down to the "One Click Resources Centre Section',
+          '• Click the "Safety" option',
+          '• In the current page, click on the image, document, audio, video or animations of your choice ',
+          '• if your are interested to download or print the file, click on download icon or print icon respectively',
+          '• Or if you want to download multiple files, click on "select image" and you can see the selected file in the right side of the page with a hand icon.'
         ],
         url: 'https://demo.myschool.in/views/sections/safety'
       }
@@ -366,4 +401,4 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
       steps: ['Sorry, I could not recognize that section. Please try again.'],
       url: ''
     };
-};  
+};
