@@ -13,6 +13,8 @@ const ChatWidget: React.FC = () => {
   const [isListening, setIsListening] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
+  const [pendingUrl, setPendingUrl] = useState<string | null>(null);
+  const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
     loadInitialState();
@@ -84,34 +86,36 @@ const ChatWidget: React.FC = () => {
     addMessage(userMessage, true);
     setInputText('');
 
-    if (
-      userMessage.toLowerCase().includes('yes') ||
-      userMessage.toLowerCase() === 'y'
-    ) {
-      const lastBot = chatState.messages.filter(m => !m.isUser).pop();
-      const urlMatch = lastBot?.text.match(/https:\/\/[^\s]+/);
-      if (urlMatch) {
-        window.open(urlMatch[0], '_blank');
-        addMessage('Opening the page for you!', false);
-        return;
-      }
-    }
-
     try {
       const intent = await analyzeUserIntent(userMessage);
-      const response = getHardcodedResponse(intent);
-      const botResponse = `${response.steps.join('\n')}
-
-You can access this at: ${response.url}
-
-Would you like me to navigate you to this page directly?`;
-      setTimeout(() => addMessage(botResponse, false), 500);
+      const response = await getHardcodedResponse(intent);
+      const botResponse = `${response.steps.join('\n')}`;
+      setTimeout(() => {
+        addMessage(botResponse, false);
+        if (response.url) {
+          setPendingUrl(response.url);
+          setShowOptions(true);
+        } else {
+          setPendingUrl(null);
+          setShowOptions(false);
+        }
+      }, 500);
     } catch {
       setTimeout(
         () => addMessage('I apologize, but I encountered an error. Please try again.', false),
         500
       );
+      setPendingUrl(null);
+      setShowOptions(false);
     }
+  };
+
+  const handleOption = (option: 'yes' | 'no') => {
+    if (option === 'yes' && pendingUrl) {
+      window.open(pendingUrl, '_blank');
+    }
+    setShowOptions(false);
+    setPendingUrl(null);
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -244,23 +248,84 @@ Would you like me to navigate you to this page directly?`;
               gap: '8px'
             }}
           >
-            {chatState.messages.map(message => (
-              <div
-                key={message.id}
-                style={{
-                  alignSelf: message.isUser ? 'flex-end' : 'flex-start',
-                  backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
-                  color: message.isUser ? 'white' : 'black',
-                  padding: '6px 10px',
-                  borderRadius: '12px',
-                  maxWidth: '80%',
-                  fontSize: '12px',
-                  whiteSpace: 'pre-line'
-                }}
-              >
-                {message.text}
-              </div>
-            ))}
+            {chatState.messages.map((message, idx) => {
+              // Detect if this is a bot message with steps (lines starting with •)
+              const isBotSteps =
+                !message.isUser &&
+                message.text.split('\n').every(line => line.trim().startsWith('•'));
+              return (
+                <div
+                  key={message.id}
+                  style={{
+                    alignSelf: message.isUser ? 'flex-end' : 'flex-start',
+                    backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
+                    color: message.isUser ? 'white' : 'black',
+                    padding: '6px 10px',
+                    borderRadius: '12px',
+                    maxWidth: '80%',
+                    fontSize: '12px',
+                    whiteSpace: 'pre-line',
+                    marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1) ? 8 : 0
+                  }}
+                >
+                  {isBotSteps ? (
+                    <ul style={{
+                      paddingLeft: 18,
+                      margin: 0,
+                      listStyle: 'disc',
+                      color: '#2d3a4a',
+                      fontSize: 13,
+                      lineHeight: 1.7,
+                      fontWeight: 500
+                    }}>
+                      {message.text.split('\n').map((step, i) => (
+                        <li key={i} style={{ marginBottom: 4 }}>{step.replace(/^•\s*/, '')}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    message.text
+                  )}
+                  {!message.isUser && showOptions && idx === chatState.messages.length - 1 && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
+                      <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Should I navigate you to the page?</span>
+                      <div style={{ display: 'flex', gap: 8 }}>
+                        <button
+                          onClick={() => handleOption('yes')}
+                          style={{
+                            background: '#007bff',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '16px',
+                            padding: '4px 16px',
+                            fontSize: '13px',
+                            cursor: 'pointer',
+                            fontWeight: 500,
+                            boxShadow: '0 1px 4px rgba(0,0,0,0.07)'
+                          }}
+                        >
+                          Yes
+                        </button>
+                        <button
+                          onClick={() => handleOption('no')}
+                          style={{
+                            background: '#f1f1f1',
+                            color: '#333',
+                            border: '1px solid #ddd',
+                            borderRadius: '16px',
+                            padding: '4px 16px',
+                            fontSize: '13px',
+                            cursor: 'pointer',
+                            fontWeight: 500
+                          }}
+                        >
+                          No
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
             <div ref={messagesEndRef} />
           </div>
 
