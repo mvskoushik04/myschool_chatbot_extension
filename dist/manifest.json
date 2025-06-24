@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "School Chatbot Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered chatbot for school portal assistance",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://demo.myschool.in/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "assets/index.tsx-loader-8c41cce5.js"
+      ],
+      "matches": [
+        "https://demo.myschool.in/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://demo.myschool.in/*"
+      ],
+      "resources": [
+        "assets/ChatWidget-b7aece4a.js",
+        "assets/index.tsx-8bb1d5ef.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
