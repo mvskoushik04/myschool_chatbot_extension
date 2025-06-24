@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Message, ChatState } from '../types';
-import { saveChatState, loadChatState } from '../utils/storage';
+import { saveChatState, loadChatState, clearChatState } from '../utils/storage';
 import { analyzeUserIntent, getHardcodedResponse } from '../utils/groqClient';
 
 const ChatWidget: React.FC = () => {
@@ -140,18 +140,20 @@ const ChatWidget: React.FC = () => {
     setChatState(prev => ({ ...prev, isMinimized: !prev.isMinimized }));
   };
 
-  const closeChatbot = () => {
-    setChatState(prev => ({ ...prev, isVisible: false }));
+  const closeChatbot = async () => {
+    await clearChatState();
+    setChatState(prev => ({ ...prev, isVisible: false, messages: [] }));
   };
 
-  const openChatbot = () => {
+  const openChatbot = async () => {
+    await loadInitialState();
     setChatState(prev => ({ ...prev, isVisible: true, isMinimized: false }));
   };
 
   if (!chatState.isVisible) {
     return (
       <div
-        onClick={openChatbot}
+        onClick={() => openChatbot()}
         style={{
           position: 'fixed',
           bottom: '20px',

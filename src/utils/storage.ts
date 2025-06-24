@@ -34,3 +34,11 @@ export const loadChatState = async (): Promise<ChatState> => {
     };
   }
 };
+
+export const clearChatState = async (): Promise<void> => {
+  try {
+    await chrome.storage.local.remove(STORAGE_KEY);
+  } catch (error) {
+    console.error('Failed to clear chat state:', error);
+  }
+};
