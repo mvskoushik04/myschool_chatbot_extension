@@ -288,13 +288,17 @@ const ChatWidget: React.FC = () => {
                       alignSelf: message.isUser ? 'flex-end' : 'flex-start',
                       backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
                       color: message.isUser ? 'white' : 'black',
-                      padding: '6px 10px',
-                      borderRadius: '12px',
+                      padding: '10px 16px',
+                      borderRadius: message.isUser ? '20px 20px 4px 20px' : '20px 20px 20px 4px',
                       maxWidth: '80%',
-                      fontSize: '13px',
+                      fontSize: '14px',
                       whiteSpace: 'pre-line',
                       marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && message.text !== 'Hello ! I am your school portal assistant , How can I help you ?') ? 8 : 0,
-                      animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)'
+                      animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)',
+                      boxShadow: '0 4px 16px rgba(0,0,0,0.10)',
+                      border: message.isUser ? '1.5px solid #007bff' : '1.5px solid #e0e0e0',
+                      position: 'relative',
+                      transition: 'box-shadow 0.2s',
                     }}
                   >
                     {isBotSteps ? (
