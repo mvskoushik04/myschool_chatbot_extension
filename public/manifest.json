@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "School Chatbot Assistant",
+    "name": "MySchool Chatbot",
     "version": "1.0.0",
-    "description": "AI-powered chatbot for school portal assistance",
+    "description": "AI-powered chatbot for MySchool",
     "permissions": [
       "activeTab",
       "storage"
