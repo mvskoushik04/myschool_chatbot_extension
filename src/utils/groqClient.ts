@@ -21,7 +21,7 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
         messages: [
           {
             role: 'system',
-            content: 'You are a school portal assistant. Strictly understand what the user wants and then respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", "safety", "kindergarten", "nursery", "lkg", "ukg", "class1", "class2", "class3", "class4", "class5", "class6", "class7", "class8", "class9", "class10", "homeschooling", "learningcentre", "theabcsong", "grade1", "grade2", "grade3", "grade4", "grade5", "grade6", "grade7", "grade8", "grade9", "grade10", "animals", "areasorlocaties", "birds", "childrens", "flowers", "fruits", "greatpersonalities", "householdthings", "humans", "insects", "mammals", "objects", "plants". If user asks any subject relating to a class, just return the class or grade that matches the other portion of the query. Try not to let the model go to fall back method. Try giving the closest output. Do not use spaces or uppercase letters.'
+            content: 'You are a school portal assistant. Strictly understand what the user wants and then respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", "safety", "kindergarten", "nursery", "lkg", "ukg", "class1", "class2", "class3", "class4", "class5", "class6", "class7", "class8", "class9", "class10", "homeschooling", "learningcentre", "theabcsong", "grade1", "grade2", "grade3", "grade4", "grade5", "grade6", "grade7", "grade8", "grade9", "grade10", "animals", "areasorlocaties", "birds", "childrens", "flowers", "fruits", "greatpersonalities", "householdthings", "humans", "insects", "mammals", "objects", "plants", "donermembership", "elearningmajor", "free", "giftmembership", "government", "homeschoolingoffers", "learningcenter", "library", "memberships", "ngo", "parent", "publication", "resourceperson", "school", "student", "teacher". If user asks any subject relating to a class, just return the class or grade that matches the other portion of the query. Try not to let the model go to fall back method. Try giving the closest output. Do not use spaces or uppercase letters.'
           },
           {
             role: 'user',
@@ -787,7 +787,215 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
             '• Select "Plants"',
         ],
         url: 'https://demo.myschool.in/views/academic/imagebank/plants?main=2&mu=12'
-      }
+      },
+      professions: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Professions"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/professions?main=2&mu=13'
+      },
+      surroundings: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Surroundings"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/surrondings?main=2&mu=14'
+      },
+      things: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Things"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/things?main=2&mu=15'
+      },
+      vegetables: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Vegetables"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/vegetables?main=2&mu=16'
+      },
+      donermembership: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Doner Membership"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/doner-membership?main=3&mu=0'
+      },
+      elearningmajor: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "E-Learning Major"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/e-learning-major?main=3&mu=1'
+      },
+      free: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Free"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/free?main=3&mu=2'
+      },
+      giftmembership: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Gift Membership"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/gift-membership?main=3&mu=3'
+      },
+      government: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Government"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/government?main=3&mu=4'
+      },
+      homeschoolingoffers: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Home Schooling"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/home-schooling?main=3&mu=5'
+      },
+      learningcenter: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Learning Center"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/learning-center?main=3&mu=6'
+      },
+      library: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Library"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/library?main=3&mu=7'
+      },
+      memberships: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Memberships"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/memberships?main=3&mu=8'
+      },
+      ngo: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "NGO"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/ngo?main=3&mu=9'
+      },
+      parent: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Parent"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/parent?main=3&mu=10'
+      },
+      publication: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Publication"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/publication?main=3&mu=11'
+      },
+      resourceperson: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Resource Person"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/resource-person?main=3&mu=12'
+      },
+      school: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "School"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/school?main=3&mu=13'
+      },
+      student: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Student"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/student?main=3&mu=14'
+      },
+      teacher: {
+        steps: [
+          '• Go to "Academic"',
+          '• Select "OFFERS"',
+          '• Select "Teacher"',
+          '• Select a file',
+          '• Download or print',
+          '• Select multiple files if needed'
+        ],
+        url: 'https://demo.myschool.in/views/academic/offers/teacher?main=3&mu=15'
+      },
     };
     const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
     return responses[normalizedIntent as keyof typeof responses] || {

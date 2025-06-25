@@ -220,7 +220,7 @@ const ChatWidget: React.FC = () => {
               color: 'white',
               cursor: 'pointer',
               marginRight: '8px',
-              fontSize: '18px'
+              fontSize: '20px'
             }}
           >
             {chatState.isMinimized ? '□' : '-'}
@@ -232,7 +232,7 @@ const ChatWidget: React.FC = () => {
               border: 'none',
               color: 'white',
               cursor: 'pointer',
-              fontSize: '16px'
+              fontSize: '18px'
             }}
           >
             ×
