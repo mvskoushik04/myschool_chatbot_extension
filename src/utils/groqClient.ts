@@ -21,7 +21,7 @@ export const analyzeUserIntent = async (userMessage: string): Promise<string> =>
         messages: [
           {
             role: 'system',
-            content: 'You are a school portal assistant.Strictly understand what the user want and then Respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", "safety", "kindergarten", "nursery", "lkg", "ukg", "class1", "class2", "class3", "class4", "class5", "class6", "class7", "class8", "class9", "class10", "homeschooling", "learningcentre", "theabcsong", "grade1", "grade2", "grade3", "grade4", "grade5", "grade6", "grade7", "grade8", "grade9", "grade10".If user asks any subject relating to a class, just return the class or grade that matches the other portion of the query . Try not to let the model go to fall back method . try giving the closest output . Do not use spaces or uppercase letters.'
+            content: 'You are a school portal assistant. Strictly understand what the user wants and then respond with only one of the following lowercase, no-space strings based on user intent: "smartwall", "visualworksheets", "pictorialstories", "projectcharts", "dictionary", "valueeducation", "scienceprojects", "languagegames", "mappointing", "subjectposters", "craftlessons", "artlessons", "parentteacheractivities", "rhymes", "holidayhomefun", "computerlessons", "mcqbank", "edumagazines", "gkscience", "teachermanuals", "earlycareer", "mindmapinfographics", "activity", "flashcards", "puzzlesriddles", "imagebank", "animatedcontent", "comics", "greatlives", "discovery", "learnhandwriting", "examtips", "brainteasers", "lunchbox", "safety", "kindergarten", "nursery", "lkg", "ukg", "class1", "class2", "class3", "class4", "class5", "class6", "class7", "class8", "class9", "class10", "homeschooling", "learningcentre", "theabcsong", "grade1", "grade2", "grade3", "grade4", "grade5", "grade6", "grade7", "grade8", "grade9", "grade10", "animals", "areasorlocaties", "birds", "childrens", "flowers", "fruits", "greatpersonalities", "householdthings", "humans", "insects", "mammals", "objects", "plants". If user asks any subject relating to a class, just return the class or grade that matches the other portion of the query. Try not to let the model go to fall back method. Try giving the closest output. Do not use spaces or uppercase letters.'
           },
           {
             role: 'user',
@@ -684,7 +684,110 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/academic/class/learning-centre?main=0&mu=15'
       },
-
+      animals: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Animals"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/animals?main=2&mu=0'
+      },
+      areasorlocaties: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Areas or Locations"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/areas-or%20locaties?main=2&mu=1'
+      },
+      birds: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Birds"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/birds?main=2&mu=2'
+      },
+      childrens: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Childrens"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/childrens?main=2&mu=3'
+      },
+      flowers: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Flowers"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/flowers?main=2&mu=4'
+      },
+      fruits: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Fruits"', 
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/fruits?main=2&mu=5'
+      },
+      greatpersonalities: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Great Personalities"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/great-personalities?main=2&mu=6'
+      },
+      householdthings: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Household Things"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/house-hold%20things?main=2&mu=7'
+      },  
+      humans: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Humans"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/humans?main=2&mu=8'
+      },
+      insects: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Insects"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/insects?main=2&mu=9'
+      },
+      mammals: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Mammals"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/mammals?main=2&mu=10'
+      },
+      objects: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Objects"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/objects?main=2&mu=11'
+      },
+      plants: {
+        steps: [
+            '• Go to "Academic"',
+            '• Select "ImageBank"',
+            '• Select "Plants"',
+        ],
+        url: 'https://demo.myschool.in/views/academic/imagebank/plants?main=2&mu=12'
+      }
     };
     const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
     return responses[normalizedIntent as keyof typeof responses] || {
