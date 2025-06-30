@@ -115,64 +115,84 @@ Student: Go to "Academic" → Select "OFFERS" → Select "Student" → Select a 
 Teacher: Go to "Academic" → Select "OFFERS" → Select "Teacher" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/offers/teacher?main=3&mu=15`;
 
 export const getResponseFromGroq = async (userMessage: string): Promise<{ response: string; url: string }> => {
-  try {
-    // Check if user is asking about bot functionality
-    if (userMessage.toLowerCase().includes('how do you work') || 
-        userMessage.toLowerCase().includes('how are you built') ||
-        userMessage.toLowerCase().includes('your functionality')) {
-      return { 
-        response: '😊 I am not supposed to mention this.', 
-        url: '' 
-      };
+    try {
+      // Check if user is asking about bot functionality
+      if (userMessage.toLowerCase().includes('how do you work') || 
+          userMessage.toLowerCase().includes('how are you built') ||
+          userMessage.toLowerCase().includes('your functionality')) {
+        return { 
+          response: '😊 I am not supposed to mention this.', 
+          url: '' 
+        };
+      }
+  
+      // Validate API key
+      if (!import.meta.env.VITE_GROQ_API_KEY) {
+        console.error('Groq API key is missing');
+        return { response: 'Configuration error. Please contact support.', url: '' };
+      }
+  
+      const response = await fetch(GROQ_API_URL, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          model: 'llama3-8b-8192',
+          messages: [
+            {
+              role: 'system',
+              content: `${SCHOOL_PORTAL_KNOWLEDGE}
+  
+  Based on the above information, answer user queries concisely about accessing different modules in the school portal. 
+  - Keep responses under 10 lines
+  - Be professional and to-the-point
+  - For any queries not related to the school portal resources mentioned above, strictly respond with: "My knowledge base doesn't handle this request."
+  - Provide step-by-step instructions when relevant
+  - Include the URL at the end if applicable, formatted as "URL: [url]"`
+            },
+            {
+              role: 'user',
+              content: userMessage
+            }
+          ],
+          temperature: 0.3,
+          max_tokens: 150
+        }),
+        signal: AbortSignal.timeout(10000) // 10 second timeout
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.error('Groq API error:', response.status, errorData);
+        throw new Error(`API request failed with status ${response.status}`);
+      }
+  
+      const data: GroqResponse = await response.json();
+      
+      if (!data.choices?.[0]?.message?.content) {
+        console.error('Invalid response structure from Groq API:', data);
+        throw new Error('Invalid API response structure');
+      }
+  
+      let content = data.choices[0].message.content;
+      
+      // Handle cases where the response might be too long
+      const lines = content.split('\n');
+      if (lines.length > 10) {
+        content = lines.slice(0, 10).join('\n') + '...';
+      }
+  
+      // Extract URL if present
+      const urlMatch = content.match(/URL:\s*(https?:\/\/[^\s]+)/);
+      const url = urlMatch ? urlMatch[1] : '';
+      const responseText = content.replace(/URL:\s*https?:\/\/[^\s]+/, '').trim();
+      
+      return { response: responseText, url };
+    } catch (error) {
+      console.error('Groq API error:', error);
+      // Maintain existing error response behavior without hardcoding responses
+      return { response: 'Sorry, I encountered an error. Please try again.', url: '' };
     }
-
-    const response = await fetch(GROQ_API_URL, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${import.meta.env.VITE_GROQ_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        model: 'llama3-8b-8192',
-        messages: [
-          {
-            role: 'system',
-            content: `${SCHOOL_PORTAL_KNOWLEDGE}
-
-Based on the above information, answer user queries concisely about accessing different modules in the school portal. 
-- Keep responses under 10 lines
-- Be professional and to-the-point
-- For any queries not related to the school portal resources mentioned above, strictly respond with: "My knowledge base doesn't handle this request."
-- Provide step-by-step instructions when relevant
-- Include the URL at the end if applicable, formatted as "URL: [url]"`
-          },
-          {
-            role: 'user',
-            content: userMessage
-          }
-        ],
-        temperature: 0.3,
-        max_tokens: 150
-      })
-    });
-
-    const data: GroqResponse = await response.json();
-    let content = data.choices?.[0]?.message?.content || 'Sorry, I encountered an error. Please try again.';
-    
-    // Handle cases where the response might be too long
-    const lines = content.split('\n');
-    if (lines.length > 10) {
-      content = lines.slice(0, 10).join('\n') + '...';
-    }
-
-    // Extract URL if present
-    const urlMatch = content.match(/URL:\s*(https?:\/\/[^\s]+)/);
-    const url = urlMatch ? urlMatch[1] : '';
-    const responseText = content.replace(/URL:\s*https?:\/\/[^\s]+/, '').trim();
-    
-    return { response: responseText, url };
-  } catch (error) {
-    console.error('Groq API error:', error);
-    return { response: 'Sorry, I encountered an error. Please try again.', url: '' };
-  }
-};
+  };

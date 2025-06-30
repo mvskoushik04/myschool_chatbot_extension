@@ -44,29 +44,38 @@ const ChatWidget: React.FC = () => {
   };
 
   const setupSpeechRecognition = () => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognitionConstructor =
-        (window as any).SpeechRecognition ||
-        (window as any).webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognitionConstructor();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
-
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setInputText(transcript);
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onend = () => {
-        setIsListening(false);
-      };
+    try {
+      if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+        const SpeechRecognitionConstructor =
+          (window as any).SpeechRecognition ||
+          (window as any).webkitSpeechRecognition;
+        recognitionRef.current = new SpeechRecognitionConstructor();
+        recognitionRef.current.continuous = false;
+        recognitionRef.current.interimResults = false;
+        recognitionRef.current.lang = 'en-US';
+  
+        recognitionRef.current.onresult = (event: any) => {
+          try {
+            const transcript = event.results[0][0].transcript;
+            setInputText(transcript);
+          } catch (transcriptError) {
+            console.error('Error processing speech recognition result:', transcriptError);
+          } finally {
+            setIsListening(false);
+          }
+        };
+  
+        recognitionRef.current.onerror = (event: any) => {
+          console.error('Speech recognition error:', event.error);
+          setIsListening(false);
+        };
+  
+        recognitionRef.current.onend = () => {
+          setIsListening(false);
+        };
+      }
+    } catch (initError) {
+      console.error('Failed to initialize speech recognition:', initError);
     }
   };
 
@@ -137,11 +146,13 @@ const ChatWidget: React.FC = () => {
 
   const startListening = () => {
     if (recognitionRef.current && !isListening && !isLoading) {
-      setIsListening(true);
       try {
+        setIsListening(true);
         recognitionRef.current.start();
-      } catch {
+      } catch (startError) {
+        console.error('Speech recognition start error:', startError);
         setIsListening(false);
+        addMessage('Voice input is not available right now. Please try typing instead.', false);
       }
     }
   };
