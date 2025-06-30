@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Message, ChatState } from '../types';
 import { saveChatState, loadChatState, clearChatState } from '../utils/storage';
-import { analyzeUserIntent, getHardcodedResponse } from '../utils/groqClient';
+import { getResponseFromGroq } from '../utils/groqClient';
 
 <style>{`@keyframes floatIn { from { transform: translateY(20px); opacity: 0.5; } to { transform: translateY(0); opacity: 1; } }`}</style>
 
@@ -17,10 +17,16 @@ const ChatWidget: React.FC = () => {
   const recognitionRef = useRef<any>(null);
   const [pendingUrl, setPendingUrl] = useState<string | null>(null);
   const [showOptions, setShowOptions] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     loadInitialState();
     setupSpeechRecognition();
+    
+    // Add welcome message if it's a new chat
+    if (chatState.messages.length === 0) {
+      addMessage('Hello! I am your school portal assistant. How can I help you today?', false);
+    }
   }, []);
 
   useEffect(() => {
@@ -35,7 +41,7 @@ const ChatWidget: React.FC = () => {
 
   const loadInitialState = async () => {
     const state = await loadChatState();
-    setChatState(state);
+    setChatState(state || { messages: [], isMinimized: false, isVisible: false });
   };
 
   const setupSpeechRecognition = () => {
@@ -83,32 +89,35 @@ const ChatWidget: React.FC = () => {
   };
 
   const handleSendMessage = async () => {
-    if (!inputText.trim()) return;
+    if (!inputText.trim() || isLoading) return;
+    
     const userMessage = inputText.trim();
     addMessage(userMessage, true);
     setInputText('');
+    setIsLoading(true);
 
     try {
-      const intent = await analyzeUserIntent(userMessage);
-      const response = await getHardcodedResponse(intent);
-      const botResponse = `${response.steps.join('\n')}`;
+      const { response, url } = await getResponseFromGroq(userMessage);
+      
       setTimeout(() => {
-        addMessage(botResponse, false);
-        if (response.url) {
-          setPendingUrl(response.url);
+        addMessage(response, false);
+        if (url) {
+          setPendingUrl(url);
           setShowOptions(true);
         } else {
           setPendingUrl(null);
           setShowOptions(false);
         }
+        setIsLoading(false);
       }, 500);
-    } catch {
-      setTimeout(
-        () => addMessage('I apologize, but I encountered an error. Please try again.', false),
-        500
-      );
-      setPendingUrl(null);
-      setShowOptions(false);
+    } catch (error) {
+      console.error('Error getting response:', error);
+      setTimeout(() => {
+        addMessage('I apologize, but I encountered an error. Please try again.', false);
+        setPendingUrl(null);
+        setShowOptions(false);
+        setIsLoading(false);
+      }, 500);
     }
   };
 
@@ -121,14 +130,14 @@ const ChatWidget: React.FC = () => {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === 'Enter' && !e.shiftKey && !isLoading) {
       e.preventDefault();
       handleSendMessage();
     }
   };
 
   const startListening = () => {
-    if (recognitionRef.current && !isListening) {
+    if (recognitionRef.current && !isListening && !isLoading) {
       setIsListening(true);
       try {
         recognitionRef.current.start();
@@ -210,7 +219,7 @@ const ChatWidget: React.FC = () => {
           fontWeight: 'bold'
         }}
       >
-        <span>Chatbot</span>
+        <span>School Portal Assistant</span>
         <div>
           <button
             onClick={toggleMinimize}
@@ -261,105 +270,91 @@ const ChatWidget: React.FC = () => {
                 }
               `}
             </style>
-            {chatState.messages.map((message, idx) => {
-              // Detect if this is a bot message with steps (lines starting with •)
-              const isBotSteps =
-                !message.isUser &&
-                message.text.split('\n').every(line => line.trim().startsWith('•'));
-              return (
+            {chatState.messages.map((message, idx) => (
+              <div
+                key={message.id}
+                style={{
+                  display: 'flex',
+                  flexDirection: message.isUser ? 'row-reverse' : 'row',
+                  alignItems: 'flex-end',
+                }}
+              >
+                <span style={{ margin: '0 6px', display: 'flex', alignItems: 'center' }}>
+                  {message.isUser ? (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#409eff"/><rect x="6" y="14" width="12" height="6" rx="3" fill="#409eff"/></svg>
+                  ) : (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f1c40f"/><rect x="9" y="16" width="6" height="2" rx="1" fill="#fff"/></svg>
+                  )}
+                </span>
                 <div
-                  key={message.id}
                   style={{
-                    display: 'flex',
-                    flexDirection: message.isUser ? 'row-reverse' : 'row',
-                    alignItems: 'flex-end',
+                    alignSelf: message.isUser ? 'flex-end' : 'flex-start',
+                    backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
+                    color: message.isUser ? 'white' : 'black',
+                    padding: '10px 16px',
+                    borderRadius: message.isUser ? '20px 20px 4px 20px' : '20px 20px 20px 4px',
+                    maxWidth: '80%',
+                    fontSize: '13px',
+                    whiteSpace: 'pre-line',
+                    marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl) ? 8 : 0,
+                    animation: 'floatIn 0.25s cubic-bezier(0.4,0,0.2,1)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.10)',
+                    border: message.isUser ? '1.5px solid #007bff' : '1.5px solid #e0e0e0',
+                    position: 'relative',
+                    transition: 'box-shadow 0.2s',
                   }}
                 >
-                  {/* Icon */}
-                  <span style={{ margin: '0 6px', display: 'flex', alignItems: 'center' }}>
-                    {message.isUser ? (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" fill="#409eff"/><rect x="6" y="14" width="12" height="6" rx="3" fill="#409eff"/></svg>
-                    ) : (
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#f1c40f"/><rect x="9" y="16" width="6" height="2" rx="1" fill="#fff"/></svg>
-                    )}
-                  </span>
-                  <div
-                    style={{
-                      alignSelf: message.isUser ? 'flex-end' : 'flex-start',
-                      backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
-                      color: message.isUser ? 'white' : 'black',
-                      padding: '10px 16px',
-                      borderRadius: message.isUser ? '20px 20px 4px 20px' : '20px 20px 20px 4px',
-                      maxWidth: '80%',
-                      fontSize: '13px',
-                      whiteSpace: 'pre-line',
-                      marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && message.text !== 'Hello ! I am your school portal assistant , How can I help you ?') ? 8 : 0,
-                      animation: 'floatIn 0.25s cubic-bezier(0.4,0,0.2,1)',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.10)',
-                      border: message.isUser ? '1.5px solid #007bff' : '1.5px solid #e0e0e0',
-                      position: 'relative',
-                      transition: 'box-shadow 0.2s',
-                    }}
-                  >
-                    {isBotSteps ? (
-                      <ul style={{
-                        paddingLeft: 18,
-                        margin: 0,
-                        listStyle: 'disc',
-                        color: '#2d3a4a',
-                        fontSize: 13,
-                        lineHeight: 1.7,
-                        fontWeight: 500
-                      }}>
-                        {message.text.split('\n').map((step, i) => (
-                          <li key={i} style={{ marginBottom: 4 }}>{step.replace(/^•\s*/, '')}</li>
-                        ))}
-                      </ul>
-                    ) : (
-                      message.text
-                    )}
-                    {!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && message.text !== 'Hello ! I am your school portal assistant , How can I help you ?' && (
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
-                        <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Should I navigate you to the page?</span>
-                        <div style={{ display: 'flex', gap: 8 }}>
-                          <button
-                            onClick={() => handleOption('yes')}
-                            style={{
-                              background: '#007bff',
-                              color: 'white',
-                              border: 'none',
-                              borderRadius: '16px',
-                              padding: '4px 16px',
-                              fontSize: '13px',
-                              cursor: 'pointer',
-                              fontWeight: 500,
-                              boxShadow: '0 1px 4px rgba(0,0,0,0.07)'
-                            }}
-                          >
-                            Yes
-                          </button>
-                          <button
-                            onClick={() => handleOption('no')}
-                            style={{
-                              background: '#f1f1f1',
-                              color: '#333',
-                              border: '1px solid #ddd',
-                              borderRadius: '16px',
-                              padding: '4px 16px',
-                              fontSize: '13px',
-                              cursor: 'pointer',
-                              fontWeight: 500
-                            }}
-                          >
-                            No
-                          </button>
-                        </div>
+                  {message.text}
+                  {!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
+                      <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Would you like me to open this page?</span>
+                      <div style={{ display: 'flex', gap: 8 }}>
+                        <button
+                          onClick={() => handleOption('yes')}
+                          style={{
+                            background: '#007bff',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '16px',
+                            padding: '4px 16px',
+                            fontSize: '13px',
+                            cursor: 'pointer',
+                            fontWeight: 500,
+                            boxShadow: '0 1px 4px rgba(0,0,0,0.07)'
+                          }}
+                        >
+                          Yes
+                        </button>
+                        <button
+                          onClick={() => handleOption('no')}
+                          style={{
+                            background: '#f1f1f1',
+                            color: '#333',
+                            border: '1px solid #ddd',
+                            borderRadius: '16px',
+                            padding: '4px 16px',
+                            fontSize: '13px',
+                            cursor: 'pointer',
+                            fontWeight: 500
+                          }}
+                        >
+                          No
+                        </button>
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
-              );
-            })}
+              </div>
+            ))}
+            {isLoading && (
+              <div style={{ display: 'flex', justifyContent: 'flex-start', marginLeft: '10px' }}>
+                <div style={{ display: 'flex', gap: '4px' }}>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ddd', animation: 'bounce 1.4s infinite ease-in-out' }}></div>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ddd', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '0.2s' }}></div>
+                  <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#ddd', animation: 'bounce 1.4s infinite ease-in-out', animationDelay: '0.4s' }}></div>
+                </div>
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
 
@@ -378,18 +373,20 @@ const ChatWidget: React.FC = () => {
               onChange={e => setInputText(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Type your message..."
+              disabled={isLoading}
               style={{
                 flex: 1,
                 padding: '6px 8px',
                 border: '1px solid #ddd',
                 borderRadius: '16px',
                 outline: 'none',
-                fontSize: '13px'
+                fontSize: '13px',
+                opacity: isLoading ? 0.7 : 1
               }}
             />
             <button
               onClick={startListening}
-              disabled={isListening}
+              disabled={isListening || isLoading}
               style={{
                 background: isListening ? '#ff6b6b' : '#28a745',
                 border: 'none',
@@ -397,33 +394,53 @@ const ChatWidget: React.FC = () => {
                 width: '30px',
                 height: '30px',
                 borderRadius: '50%',
-                cursor: 'pointer',
-                fontSize: '13px'
+                cursor: isListening || isLoading ? 'not-allowed' : 'pointer',
+                fontSize: '13px',
+                opacity: isLoading ? 0.7 : 1
               }}
             >
               🎤
             </button>
             <button
               onClick={handleSendMessage}
+              disabled={isLoading}
               style={{
-                background: '#007bff',
+                background: isLoading ? '#cccccc' : '#007bff',
                 border: 'none',
                 color: 'white',
                 width: '30px',
                 height: '30px',
                 borderRadius: '50%',
-                cursor: 'pointer',
+                cursor: isLoading ? 'not-allowed' : 'pointer',
                 fontSize: '13px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
             >
-            
+              {isLoading ? (
+                <div style={{ width: '16px', height: '16px', border: '2px solid #fff', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              )}
             </button>
           </div>
         </>
       )}
+      <style>
+        {`
+          @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+          }
+          @keyframes spin {
+            to { transform: rotate(360deg); }
+          }
+        `}
+      </style>
     </div>
   );
 };
