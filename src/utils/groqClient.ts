@@ -64,8 +64,10 @@ Class 7: Go to "Academic" → Select "Class" → Select "Class 7" → Select a f
 Class 8: Go to "Academic" → Select "Class" → Select "Class 8" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/class-8?main=0&mu=11
 Class 9: Go to "Academic" → Select "Class" → Select "Class 9" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/class-9?main=0&mu=12
 Class 10: Go to "Academic" → Select "Class" → Select "Class 10" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/class-10?main=0&mu=13
-Homeschooling: Go to "Academic" → Select "Class" → Select "Homeschooling" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/homeschooling?main=0&mu=14
-Learning Centre: Go to "Academic" → Select "Class" → Select "Learning Centre" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/learning-centre?main=0&mu=15
+Class 11: Go to "Academic" → Select "Class" → Select "Class 11" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/class-11?main=0&mu=14
+Class 12: Go to "Academic" → Select "Class" → Select "Class 12" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/class-12?main=0&mu=15
+Homeschooling: Go to "Academic" → Select "Class" → Select "Homeschooling" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/homeschooling?main=0&mu=16
+Learning Centre: Go to "Academic" → Select "Class" → Select "Learning Centre" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/class/learning-centre?main=0&mu=17
 
 GRADE MODULES:
 Grade 1: Go to "Academic" → Select "GRADE" → Select "GRADE 1" → Select a file → Download or print → Select multiple files if needed. URL: https://demo.myschool.in/views/academic/grade/grade-1?main=1&mu=0
@@ -140,7 +142,7 @@ export const getResponseFromGroq = async (userMessage: string): Promise<{ respon
 Based on the above information, answer user queries concisely about accessing different modules in the school portal. 
 - Keep responses under 10 lines
 - Be professional and to-the-point
-- For unknown topics, respond with "I am not trained yet"
+- For any queries not related to the school portal resources mentioned above, strictly respond with: "My knowledge base doesn't handle this request."
 - Provide step-by-step instructions when relevant
 - Include the URL at the end if applicable, formatted as "URL: [url]"`
           },
