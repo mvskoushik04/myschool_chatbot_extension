@@ -15,6 +15,7 @@ html, body, #root, #chatbot-extension-root {
   color: #222;
   font-family: 'Segoe UI', 'Inter', Arial, sans-serif;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
 }
 
