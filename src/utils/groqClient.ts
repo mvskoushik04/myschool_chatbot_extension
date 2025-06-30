@@ -1295,6 +1295,7 @@ export const getHardcodedResponse = (intent: string): { steps: string[], url: st
         ],
         url: 'https://demo.myschool.in/views/early-career/budding%20career/skill-resources?main=0&mu=13'
       },
+      
     };
     const normalizedIntent = intent.toLowerCase().replace(/\s/g, '').trim();
     return responses[normalizedIntent as keyof typeof responses] || {
