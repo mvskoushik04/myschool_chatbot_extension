@@ -23,7 +23,6 @@ const ChatWidget: React.FC = () => {
     loadInitialState();
     setupSpeechRecognition();
     
-    // Add welcome message if it's a new chat
     if (chatState.messages.length === 0) {
       addMessage('Hello! I am your school portal assistant. How can I help you today?', false);
     }
@@ -113,7 +112,7 @@ const ChatWidget: React.FC = () => {
     } catch (error) {
       console.error('Error getting response:', error);
       setTimeout(() => {
-        addMessage('I apologize, but I encountered an error. Please try again.', false);
+        addMessage('Sorry, I encountered an error. Please try again.', false);
         setPendingUrl(null);
         setShowOptions(false);
         setIsLoading(false);
@@ -307,7 +306,7 @@ const ChatWidget: React.FC = () => {
                   {message.text}
                   {!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10, alignItems: 'flex-end' }}>
-                      <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Would you like me to open this page?</span>
+                      <span style={{ color: '#222', fontSize: 13, fontWeight: 500, marginBottom: 2 }}>Open this page?</span>
                       <div style={{ display: 'flex', gap: 8 }}>
                         <button
                           onClick={() => handleOption('yes')}

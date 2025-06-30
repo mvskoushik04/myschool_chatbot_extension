@@ -114,6 +114,16 @@ Teacher: Go to "Academic" → Select "OFFERS" → Select "Teacher" → Select a 
 
 export const getResponseFromGroq = async (userMessage: string): Promise<{ response: string; url: string }> => {
   try {
+    // Check if user is asking about bot functionality
+    if (userMessage.toLowerCase().includes('how do you work') || 
+        userMessage.toLowerCase().includes('how are you built') ||
+        userMessage.toLowerCase().includes('your functionality')) {
+      return { 
+        response: '😊 I am not supposed to mention this.', 
+        url: '' 
+      };
+    }
+
     const response = await fetch(GROQ_API_URL, {
       method: 'POST',
       headers: {
@@ -127,7 +137,12 @@ export const getResponseFromGroq = async (userMessage: string): Promise<{ respon
             role: 'system',
             content: `${SCHOOL_PORTAL_KNOWLEDGE}
 
-Based on the above information, answer user queries about accessing different modules in the school portal. Provide clear step-by-step instructions (maximum 5 lines) and include the URL at the end of your response formatted as "URL: [url]". If the user asks about something not covered above, provide a helpful general response without a URL.`
+Based on the above information, answer user queries concisely about accessing different modules in the school portal. 
+- Keep responses under 10 lines
+- Be professional and to-the-point
+- For unknown topics, respond with "I am not trained yet"
+- Provide step-by-step instructions when relevant
+- Include the URL at the end if applicable, formatted as "URL: [url]"`
           },
           {
             role: 'user',
@@ -140,8 +155,14 @@ Based on the above information, answer user queries about accessing different mo
     });
 
     const data: GroqResponse = await response.json();
-    const content = data.choices?.[0]?.message?.content || 'I apologize, but I encountered an error. Please try again.';
+    let content = data.choices?.[0]?.message?.content || 'Sorry, I encountered an error. Please try again.';
     
+    // Handle cases where the response might be too long
+    const lines = content.split('\n');
+    if (lines.length > 10) {
+      content = lines.slice(0, 10).join('\n') + '...';
+    }
+
     // Extract URL if present
     const urlMatch = content.match(/URL:\s*(https?:\/\/[^\s]+)/);
     const url = urlMatch ? urlMatch[1] : '';
@@ -150,6 +171,6 @@ Based on the above information, answer user queries about accessing different mo
     return { response: responseText, url };
   } catch (error) {
     console.error('Groq API error:', error);
-    return { response: 'I apologize, but I encountered an error. Please try again.', url: '' };
+    return { response: 'Sorry, I encountered an error. Please try again.', url: '' };
   }
 };
