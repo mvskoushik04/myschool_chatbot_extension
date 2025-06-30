@@ -419,9 +419,7 @@ const ChatWidget: React.FC = () => {
                 justifyContent: 'center'
               }}
             >
-              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.01 21L23 12L2.01 3V10L17 12L2.01 14V21Z" fill="white" stroke="#409eff" strokeWidth="2" strokeLinejoin="round"/>
-              </svg>
+            
             </button>
           </div>
         </>
