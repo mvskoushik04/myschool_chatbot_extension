@@ -250,7 +250,7 @@ const ChatWidget: React.FC = () => {
               fontSize: '20px'
             }}
           >
-            {chatState.isMinimized ? '□' : '-'}
+            {chatState.isMinimized ? <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="Minimize Button"style={{ width: '15px', height: '15px', display: 'block' }} ></img> : <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==" alt="Maximize Button" style={{ width: '10px', height: '2px', display: 'block' }}></img> }
           </button>
           <button
             onClick={closeChatbot}
@@ -262,7 +262,11 @@ const ChatWidget: React.FC = () => {
               fontSize: '18px'
             }}
           >
-            ×
+           <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgNi40MUwxNy41OSA1TDEyIDEwLjU5TDYuNDEgNUw1IDYuNDFMMTAuNTkgMTJMNSAxNy41OWwzLjU5IDMuNTlMMTIgMTUuNDFMMTcuNTkgMjFsMS40MS0xLjQxTDEzLjQxIDExeiIvPjwvc3ZnPg=="
+            alt="Close"
+            style={{ width: '18px', height: '18px', display: 'block' }}
+          />
           </button>
         </div>
       </div>
@@ -327,15 +331,16 @@ const ChatWidget: React.FC = () => {
                   <div
                     style={{
                       alignSelf: message.isUser ? 'flex-end' : 'flex-start',
-                      backgroundColor: message.isUser ? '#007bff' : '#f1f1f1',
-                      color: message.isUser ? 'white' : 'black',
-                      padding: '6px 10px',
-                      borderRadius: '12px',
+                      backgroundColor: message.isUser ? '#007bff': '#f1f1f1',
+                      color: '#222',
+                      padding: '6px 12px',
+                      borderRadius: message.isUser ? '16px 16px 4px 16px' : '16px 16px 16px 4px',
                       maxWidth: '80%',
-                      fontSize: '13px',
+                      fontSize: '14px',
                       whiteSpace: 'pre-line',
                       marginBottom: (!message.isUser && showOptions && idx === chatState.messages.length - 1 && pendingUrl && message.text !== 'Hello ! I am your school portal assistant , How can I help you ?') ? 8 : 0,
-                      animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)'
+                      animation: 'floatIn 0.35s cubic-bezier(0.4,0,0.2,1)',
+                      boxShadow: '0 2px 8px 0 rgba(60, 80, 120, 0.07)'
                     }}
                   >
                     {isBotSteps ? (
