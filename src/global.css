@@ -1,5 +1,5 @@
 /* Import normalize.css from node_modules */
-@import-normalize;
+@import 'normalize.css';
 
 /* Set box-sizing globally */
 *, *::before, *::after {
