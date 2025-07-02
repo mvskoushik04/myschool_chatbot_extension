@@ -6,7 +6,7 @@ import manifest from './public/manifest.json'
 
 export default defineConfig({
   plugins: [
-    react(),
+    react(), // <-- This is required!
     crx({ manifest })
   ],
   build: {

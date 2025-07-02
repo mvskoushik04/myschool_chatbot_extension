@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // <-- This is still needed for some setups!
 import { createRoot } from 'react-dom/client';
 import ChatWidget from './ChatWidget';
 import '../global.css';

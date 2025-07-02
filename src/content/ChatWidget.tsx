@@ -2,14 +2,21 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Message, ChatState } from '../types';
 import { saveChatState, loadChatState, clearChatState } from '../utils/storage';
 import { analyzeUserIntent, getHardcodedResponse } from '../utils/groqClient';
+import { Issue } from '../types/Issue';
+import { issueService } from '../utils/issueService';
 
-<style>{`@keyframes floatIn { from { transform: translateY(20px); opacity: 0.5; } to { transform: translateY(0); opacity: 1; } }`}</style>
+const floatInKeyframes = `
+  @keyframes floatIn {
+    from { transform: translateY(20px); opacity: 0.5; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+`;
 
 const ChatWidget: React.FC = () => {
   const [chatState, setChatState] = useState<ChatState>({
     messages: [],
     isMinimized: false,
-    isVisible: false
+    isVisible: false,
   });
   const [inputText, setInputText] = useState('');
   const [isListening, setIsListening] = useState(false);
@@ -84,7 +91,7 @@ const ChatWidget: React.FC = () => {
   };
   const handleIssueRaising = () => {
     setIsIssueMode(true);
-    addMessage('Kindly mention your issue and click on the issue button to raise a customer support request', false);
+    addMessage('Please describe your issue. A unique request ID will be assigned to track your issue.', false);
   };
   
 
@@ -93,12 +100,14 @@ const ChatWidget: React.FC = () => {
   
     const userMessage = inputText.trim();
   
-    // Handle issue mode
     if (isIssueMode) {
       addMessage(userMessage, true);
       setInputText('');
-      const whatsappUrl = `https://wa.me/919281119070?text=${encodeURIComponent(userMessage)}`;
-      window.open(whatsappUrl, '_blank');
+  
+      // Create new issue
+      const issue = issueService.addIssue(userMessage);
+  
+      addMessage(`Your issue has been raised. Request ID: ${issue.id}`, false);
       setIsIssueMode(false);
       return;
     }
@@ -122,14 +131,14 @@ const ChatWidget: React.FC = () => {
         }
       }, 500);
     } catch {
-      setTimeout(
-        () => addMessage('I apologize, but I encountered an error. Please try again.', false),
-        500
-      );
+      setTimeout(() => {
+        addMessage('I apologize, but I encountered an error. Please try again.', false);
+      }, 500);
       setPendingUrl(null);
       setShowOptions(false);
     }
   };
+  
   
 
   const handleOption = (option: 'yes' | 'no') => {
